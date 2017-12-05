@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chord name="E">
+	<e4>0</e4>
+	<b3>0</b3>
+	<g3>1</g3>
+	<d3>2</d3>
+	<a2>2</a2>
+	<e2>0</e2>
+</chord>

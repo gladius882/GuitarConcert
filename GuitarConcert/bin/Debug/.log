@@ -1,0 +1,231 @@
+----------------------------------------------------------------
+2017-12-03 14:30:23
+Nie można odnaleźć pliku 'C:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\bin\Debug\song\ - .gcl'.
+HResult: -2147024894
+   w System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   w System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   w System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
+   w System.IO.File.ReadAllText(String path)
+   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 42
+
+----------------------------------------------------------------
+2017-12-03 14:30:23
+Nie można odnaleźć pliku 'C:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\bin\Debug\song\ - .gct'.
+HResult: -2147024894
+   w System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   w System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   w System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
+   w System.IO.File.ReadAllText(String path)
+   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 56
+
+----------------------------------------------------------------
+2017-12-03 14:30:23
+Wartość nie może być zerowa.
+Nazwa parametru: item
+HResult: -2147467261
+   w System.Windows.Forms.ListBox.ObjectCollection.AddInternal(Object item)
+   w System.Windows.Forms.ListBox.ObjectCollection.Add(Object item)
+   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 69
+
+----------------------------------------------------------------
+2017-12-03 14:31:16
+Nie można odnaleźć pliku 'C:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\bin\Debug\song\ - .gcl'.
+HResult: -2147024894
+   w System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   w System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   w System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
+   w System.IO.File.ReadAllText(String path)
+   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 42
+
+----------------------------------------------------------------
+2017-12-03 14:31:16
+Nie można odnaleźć pliku 'C:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\bin\Debug\song\ - .gct'.
+HResult: -2147024894
+   w System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   w System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   w System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
+   w System.IO.File.ReadAllText(String path)
+   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 56
+
+----------------------------------------------------------------
+2017-12-03 14:31:16
+Wartość nie może być zerowa.
+Nazwa parametru: item
+HResult: -2147467261
+   w System.Windows.Forms.ListBox.ObjectCollection.AddInternal(Object item)
+   w System.Windows.Forms.ListBox.ObjectCollection.Add(Object item)
+   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 69
+
+----------------------------------------------------------------
+2017-12-03 14:31:31
+Nie można odnaleźć pliku 'C:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\bin\Debug\song\ - .gcl'.
+HResult: -2147024894
+   w System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   w System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   w System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
+   w System.IO.File.ReadAllText(String path)
+   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 42
+
+----------------------------------------------------------------
+2017-12-03 14:31:31
+Nie można odnaleźć pliku 'C:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\bin\Debug\song\ - .gct'.
+HResult: -2147024894
+   w System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   w System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   w System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
+   w System.IO.File.ReadAllText(String path)
+   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 56
+
+----------------------------------------------------------------
+2017-12-03 14:31:31
+Wartość nie może być zerowa.
+Nazwa parametru: item
+HResult: -2147467261
+   w System.Windows.Forms.ListBox.ObjectCollection.AddInternal(Object item)
+   w System.Windows.Forms.ListBox.ObjectCollection.Add(Object item)
+   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 69
+
+----------------------------------------------------------------
+2017-12-03 14:31:51
+Nie można odnaleźć pliku 'C:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\bin\Debug\song\ - .gcl'.
+HResult: -2147024894
+   w System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   w System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   w System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
+   w System.IO.File.ReadAllText(String path)
+   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 42
+
+----------------------------------------------------------------
+2017-12-03 14:31:51
+Nie można odnaleźć pliku 'C:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\bin\Debug\song\ - .gct'.
+HResult: -2147024894
+   w System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   w System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   w System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
+   w System.IO.File.ReadAllText(String path)
+   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 56
+
+----------------------------------------------------------------
+2017-12-03 14:31:51
+Wartość nie może być zerowa.
+Nazwa parametru: item
+HResult: -2147467261
+   w System.Windows.Forms.ListBox.ObjectCollection.AddInternal(Object item)
+   w System.Windows.Forms.ListBox.ObjectCollection.Add(Object item)
+   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 69
+
+----------------------------------------------------------------
+2017-12-03 14:32:15
+Nie można odnaleźć pliku 'C:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\bin\Debug\song\ - .gcl'.
+HResult: -2147024894
+   w System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   w System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   w System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
+   w System.IO.File.ReadAllText(String path)
+   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 42
+
+----------------------------------------------------------------
+2017-12-03 14:32:16
+Nie można odnaleźć pliku 'C:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\bin\Debug\song\ - .gct'.
+HResult: -2147024894
+   w System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   w System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   w System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
+   w System.IO.File.ReadAllText(String path)
+   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 56
+
+----------------------------------------------------------------
+2017-12-03 14:32:16
+Wartość nie może być zerowa.
+Nazwa parametru: item
+HResult: -2147467261
+   w System.Windows.Forms.ListBox.ObjectCollection.AddInternal(Object item)
+   w System.Windows.Forms.ListBox.ObjectCollection.Add(Object item)
+   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 69
+
+----------------------------------------------------------------
+2017-12-03 14:32:32
+Nie można odnaleźć pliku 'C:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\bin\Debug\song\ - .gcl'.
+HResult: -2147024894
+   w System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   w System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   w System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
+   w System.IO.File.ReadAllText(String path)
+   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 42
+
+----------------------------------------------------------------
+2017-12-03 14:32:32
+Nie można odnaleźć pliku 'C:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\bin\Debug\song\ - .gct'.
+HResult: -2147024894
+   w System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   w System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   w System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
+   w System.IO.File.ReadAllText(String path)
+   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 56
+
+----------------------------------------------------------------
+2017-12-03 14:32:32
+Wartość nie może być zerowa.
+Nazwa parametru: item
+HResult: -2147467261
+   w System.Windows.Forms.ListBox.ObjectCollection.AddInternal(Object item)
+   w System.Windows.Forms.ListBox.ObjectCollection.Add(Object item)
+   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 69
+
+----------------------------------------------------------------
+2017-12-03 14:32:46
+Nie można odnaleźć pliku 'C:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\bin\Debug\song\ - .gcl'.
+HResult: -2147024894
+   w System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   w System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   w System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
+   w System.IO.File.ReadAllText(String path)
+   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 42
+
+----------------------------------------------------------------
+2017-12-03 14:32:46
+Nie można odnaleźć pliku 'C:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\bin\Debug\song\ - .gct'.
+HResult: -2147024894
+   w System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   w System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   w System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
+   w System.IO.File.ReadAllText(String path)
+   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 56
+
+----------------------------------------------------------------
+2017-12-03 14:32:46
+Wartość nie może być zerowa.
+Nazwa parametru: item
+HResult: -2147467261
+   w System.Windows.Forms.ListBox.ObjectCollection.AddInternal(Object item)
+   w System.Windows.Forms.ListBox.ObjectCollection.Add(Object item)
+   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 69
+
