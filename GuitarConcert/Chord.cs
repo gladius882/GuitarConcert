@@ -16,9 +16,7 @@ namespace GuitarConcert
 	/// Description of Chord.
 	/// </summary>
 	public class Chord
-	{
-		private const string chordExtension = "chrd";
-		
+	{	
 		private int E4;
 		private int B3;
 		private int G3;
@@ -71,7 +69,7 @@ namespace GuitarConcert
 			// TODO Draw chord diagram
 			
 			graphics.DrawString(this.Name, new Font(SettingsSingleton.Instance.option["fontName"], float.Parse(SettingsSingleton.Instance.option["fontSize"]), System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238))), Brushes.Black, 0, 0);
-			graphics.DrawRectangle(blackPen, new Rectangle(0, 0, 150, 100));
+//			graphics.DrawRectangle(blackPen, new Rectangle(0, 0, 150, 100));
 			
 			return bmp;
 		}

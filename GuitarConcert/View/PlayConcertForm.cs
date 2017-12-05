@@ -18,6 +18,8 @@ namespace GuitarConcert
 	public partial class PlayConcertForm : Form
 	{
 		private Song currentSong;
+		private Chord currentChord;
+		private int tick = 0;
 		
 		public PlayConcertForm(Song sng)
 		{
@@ -35,6 +37,8 @@ namespace GuitarConcert
 			
 			Chord Am = new Chord();
 			this.chordDiagramPicture.Image = Am.CreateBitmap();
+			
+			timer.Tick += this.Delay;
 		}
 		
 		public void loadSong(Song sng)
@@ -55,6 +59,14 @@ namespace GuitarConcert
 				Logger.ToFile(exception);
 			}
 			
+			
+			this.chordsListBox.Items.Clear();
+			foreach(string chrd in sng.SongBook.ChordsList)
+			{
+				this.chordsListBox.Items.Add(chrd);
+			}
+			
+			
 			try {
 				string tab = File.ReadAllText(String.Format("{0}/{1} - {2}.{3}",
 				                                            SettingsSingleton.Instance.option["songDirectory"],
@@ -69,7 +81,7 @@ namespace GuitarConcert
 			}
 			
 			try {
-				this.pictureBox1.ImageLocation = "assets/covers/"+sng.getString("songArtist")+" - "+sng.getString("songAlbum")+".png";
+				this.pictureBox1.ImageLocation = "assets/covers/"+sng.getString("songArtist")+" - "+sng.getString("songAlbum")+".jpg";
 			}
 			catch(Exception exception) {
 				Logger.ToFile(exception);
@@ -86,6 +98,43 @@ namespace GuitarConcert
 			catch(Exception exception) {
 				Logger.ToFile(exception);
 			}
+		}
+		void ToolStripPlayClick(object sender, EventArgs e)
+		{
+			this.timer.Interval = 60000 / this.currentSong.getInt("bpm");
+			MessageBox.Show(timer.Interval.ToString());
+			
+			this.chordsListBox.SelectedIndex = tick;
+			Chord chrd = new Chord(this.chordsListBox.SelectedItems[0].ToString().Trim());
+			this.chordDiagramPicture.Image = chrd.CreateBitmap();
+			tick++;
+			
+			timer.Start();
+		}
+		
+		private void Delay(object sender, EventArgs e)
+		{
+			if(tick < chordsListBox.Items.Count)
+			{
+				this.chordsListBox.SelectedIndex = tick;
+				string selectedValue = this.chordsListBox.SelectedItems[0].ToString().Trim();
+				
+				if(selectedValue != String.Empty)
+				{
+					Chord chrd = new Chord(selectedValue);
+					this.chordDiagramPicture.Image = chrd.CreateBitmap();
+				}
+			}
+			else
+				timer.Stop();
+			
+			this.tick++;
+		}
+		
+		void ToolStripStopClick(object sender, EventArgs e)
+		{
+			timer.Stop();
+			this.tick = 0;
 		}
 	}
 }

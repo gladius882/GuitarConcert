@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Chord.cs" />
+    <Compile Include="ChordsSongBook.cs" />
     <Compile Include="IniFile.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="MainForm.cs" />
@@ -61,6 +62,10 @@
     <Compile Include="View\PlayConcertForm.cs" />
     <Compile Include="View\PlayConcertForm.Designer.cs">
       <DependentUpon>PlayConcertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PlayConcertForm.Designer1.cs">
+      <DependentUpon>PlayConcertForm.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="View\SettingsForm.cs" />
     <Compile Include="View\SettingsForm.Designer.cs">
@@ -77,6 +82,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\PlayConcertForm.resx">
       <DependentUpon>PlayConcertForm.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PlayConcertForm.Designer1.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="View\SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>

@@ -18,12 +18,16 @@ namespace GuitarConcert
 	public class Song
 	{
 		public readonly string errorString;
+		public ChordsSongBook SongBook;
 		private Dictionary<string, string> info;
 		
 		public Song(string fileName)
 		{
 			this.errorString = "undefined";
 			this.info = IniFile.ReadOptions(fileName);
+			
+			this.SongBook = new ChordsSongBook();
+			this.SongBook.Load(info["songTitle"], info["songArtist"]);
 		}
 		
 		public string getString(string key)

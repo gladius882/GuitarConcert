@@ -8,9 +8,9 @@ genre:Rock
 # usefull info
 difficulty:Easy
 tags:
-tonation:E
+key:E
 metrum:4/4
-bmp:120
+bpm:120
 
 # play info
 autoScrollSpeed:1

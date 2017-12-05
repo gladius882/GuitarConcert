@@ -229,3 +229,27 @@ HResult: -2147467261
    w System.Windows.Forms.ListBox.ObjectCollection.Add(Object item)
    w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 69
 
+----------------------------------------------------------------
+2017-12-05 19:16:12
+Dany klucz nie był obecny w słowniku.
+HResult: -2146232969
+   w System.ThrowHelper.ThrowKeyNotFoundException()
+   w System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   w GuitarConcert.Song.getInt(String key) w c:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\Song.cs:wiersz 43
+
+----------------------------------------------------------------
+2017-12-05 19:16:58
+Dany klucz nie był obecny w słowniku.
+HResult: -2146232969
+   w System.ThrowHelper.ThrowKeyNotFoundException()
+   w System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   w GuitarConcert.Song.getString(String key) w c:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\Song.cs:wiersz 32
+
+----------------------------------------------------------------
+2017-12-05 19:17:00
+Dany klucz nie był obecny w słowniku.
+HResult: -2146232969
+   w System.ThrowHelper.ThrowKeyNotFoundException()
+   w System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   w GuitarConcert.Song.getInt(String key) w c:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\Song.cs:wiersz 43
+
