@@ -52,6 +52,17 @@ namespace GuitarConcert
 			}
 		}
 		
+		public float getFloat(string key)
+		{
+			try {
+				return float.Parse(info[key]);
+			}
+			catch(Exception exception) {
+				Logger.ToFile(exception);
+				return -1;
+			}
+		}
+		
 		public void PlayMP3()
 		{
 			// TODO Play mp3 from file

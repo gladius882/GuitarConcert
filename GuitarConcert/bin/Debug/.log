@@ -253,3 +253,31 @@ HResult: -2146232969
    w System.Collections.Generic.Dictionary`2.get_Item(TKey key)
    w GuitarConcert.Song.getInt(String key) w c:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\Song.cs:wiersz 43
 
+----------------------------------------------------------------
+2017-12-06 18:23:43
+Indeks wykraczał poza granice tablicy.
+HResult: -2146233080
+   w System.Array.InternalGetReference(Void* elemRef, Int32 rank, Int32* pIndices)
+   w System.Array.SetValue(Object value, Int32 index)
+   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\View\PlayConcertForm.cs:wiersz 56
+
+----------------------------------------------------------------
+2017-12-06 18:34:15
+k: 51, k2: 109
+
+----------------------------------------------------------------
+2017-12-06 18:34:58
+k: 51, k2: 109
+
+----------------------------------------------------------------
+2017-12-06 18:35:59
+k: 51, k2: 109
+
+----------------------------------------------------------------
+2017-12-06 18:41:26
+k: 60, k2: 118
+
+----------------------------------------------------------------
+2017-12-06 18:45:08
+k: 116, k2: 118
+

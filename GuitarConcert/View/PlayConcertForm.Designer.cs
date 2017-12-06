@@ -30,11 +30,6 @@ namespace GuitarConcert
 		private System.Windows.Forms.Timer timer;
 		private System.Windows.Forms.ListBox chordsListBox;
 		private System.Windows.Forms.ToolStripButton toolStripStop;
-		private System.Windows.Forms.ToolStrip toolStrip2;
-		private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-		private System.Windows.Forms.ToolStripButton toolStripButton1;
-		private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
-		private System.Windows.Forms.ToolStripButton toolStripButton2;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -76,11 +71,6 @@ namespace GuitarConcert
 			this.chordsListBox = new System.Windows.Forms.ListBox();
 			this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
 			this.timer = new System.Windows.Forms.Timer(this.components);
-			this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-			this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-			this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
-			this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-			this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
 			this.splitContainer1.Panel1.SuspendLayout();
 			this.splitContainer1.Panel2.SuspendLayout();
@@ -108,7 +98,6 @@ namespace GuitarConcert
 			this.splitContainer5.Panel1.SuspendLayout();
 			this.splitContainer5.Panel2.SuspendLayout();
 			this.splitContainer5.SuspendLayout();
-			this.toolStrip2.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// splitContainer1
@@ -142,7 +131,6 @@ namespace GuitarConcert
 			// 
 			// splitContainer3.Panel2
 			// 
-			this.splitContainer3.Panel2.Controls.Add(this.toolStrip2);
 			this.splitContainer3.Panel2.Controls.Add(this.toolStrip1);
 			this.splitContainer3.Size = new System.Drawing.Size(242, 592);
 			this.splitContainer3.SplitterDistance = 387;
@@ -167,7 +155,7 @@ namespace GuitarConcert
 			this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
 			this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
-			this.pictureBox1.ImageLocation = "assets/covers/unknown.png";
+			this.pictureBox1.ImageLocation = "assets/covers/unknown.jpg";
 			this.pictureBox1.Location = new System.Drawing.Point(0, 0);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(242, 225);
@@ -256,6 +244,7 @@ namespace GuitarConcert
 			this.lyricsBox.Size = new System.Drawing.Size(338, 388);
 			this.lyricsBox.TabIndex = 0;
 			this.lyricsBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.lyricsBox.WordWrap = false;
 			// 
 			// tabBox
 			// 
@@ -337,46 +326,6 @@ namespace GuitarConcert
 			this.checkedListBox1.Size = new System.Drawing.Size(222, 202);
 			this.checkedListBox1.TabIndex = 0;
 			// 
-			// toolStrip2
-			// 
-			this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-			this.toolStripLabel1,
-			this.toolStripButton1,
-			this.toolStripTextBox1,
-			this.toolStripButton2});
-			this.toolStrip2.Location = new System.Drawing.Point(0, 39);
-			this.toolStrip2.Name = "toolStrip2";
-			this.toolStrip2.Size = new System.Drawing.Size(242, 25);
-			this.toolStrip2.TabIndex = 1;
-			this.toolStrip2.Text = "toolStrip2";
-			// 
-			// toolStripButton1
-			// 
-			this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripButton1.Name = "toolStripButton1";
-			this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-			this.toolStripButton1.Text = "toolStripButton1";
-			// 
-			// toolStripTextBox1
-			// 
-			this.toolStripTextBox1.Name = "toolStripTextBox1";
-			this.toolStripTextBox1.Size = new System.Drawing.Size(60, 25);
-			// 
-			// toolStripButton2
-			// 
-			this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripButton2.Name = "toolStripButton2";
-			this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
-			this.toolStripButton2.Text = "toolStripButton2";
-			// 
-			// toolStripLabel1
-			// 
-			this.toolStripLabel1.Name = "toolStripLabel1";
-			this.toolStripLabel1.Size = new System.Drawing.Size(51, 22);
-			this.toolStripLabel1.Text = "Tempo: ";
-			// 
 			// PlayConcertForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -416,8 +365,6 @@ namespace GuitarConcert
 			this.splitContainer5.Panel2.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
 			this.splitContainer5.ResumeLayout(false);
-			this.toolStrip2.ResumeLayout(false);
-			this.toolStrip2.PerformLayout();
 			this.ResumeLayout(false);
 
 		}

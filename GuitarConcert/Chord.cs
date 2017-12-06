@@ -68,7 +68,7 @@ namespace GuitarConcert
 			
 			// TODO Draw chord diagram
 			
-			graphics.DrawString(this.Name, new Font(SettingsSingleton.Instance.option["fontName"], float.Parse(SettingsSingleton.Instance.option["fontSize"]), System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238))), Brushes.Black, 0, 0);
+			graphics.DrawString(this.Name, new Font(SettingsSingleton.Instance.option["fontName"], float.Parse(SettingsSingleton.Instance.option["fontSize"]), System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238))), Brushes.Black, 0, 0);
 //			graphics.DrawRectangle(blackPen, new Rectangle(0, 0, 150, 100));
 			
 			return bmp;
