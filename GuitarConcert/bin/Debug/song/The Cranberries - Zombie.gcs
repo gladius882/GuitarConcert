@@ -10,11 +10,11 @@ difficulty:Easy
 tags:
 key:E
 metrum:4/4
-bpm:120
+bpm:720
 
 # play info
-autoScrollSpeed:1
-autoScrollDelay:90
+autoScrollSpeed:4
+autoScrollDelay:128
 audioFile:C:\Users\gladius882\Music\Cranberries - Zombie.mp3
 audioLink:
 videoFile:
