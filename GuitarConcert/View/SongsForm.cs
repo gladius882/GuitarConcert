@@ -63,6 +63,8 @@ namespace GuitarConcert
 				string[] details = row.Split(';');
 				this.listViewSongs.Items.Add(new ListViewItem(details));
 			}
+			
+			this.toolStripStatusLabel.Text = "Piosenek na liście: " + this.listViewSongs.Items.Count.ToString();
 		}
 		
 		void ListViewSongsDoubleClick(object sender, EventArgs e)

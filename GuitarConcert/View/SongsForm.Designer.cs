@@ -42,6 +42,7 @@ namespace GuitarConcert
 			this.toolStripAdd = new System.Windows.Forms.ToolStripButton();
 			this.toolStripDelete = new System.Windows.Forms.ToolStripButton();
 			this.toolStripEdit = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
 			this.toolStripSongs = new System.Windows.Forms.ToolStripButton();
 			this.toolStripWishlist = new System.Windows.Forms.ToolStripButton();
 			this.listViewSongs = new System.Windows.Forms.ListView();
@@ -54,9 +55,11 @@ namespace GuitarConcert
 			this.contextMenuItemAdd = new System.Windows.Forms.ToolStripMenuItem();
 			this.contextMenuItemDelete = new System.Windows.Forms.ToolStripMenuItem();
 			this.contextMenuItemEdit = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+			this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.toolStrip1.SuspendLayout();
 			this.songContextMenu.SuspendLayout();
+			this.statusStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// toolStrip1
@@ -101,6 +104,11 @@ namespace GuitarConcert
 			this.toolStripEdit.Name = "toolStripEdit";
 			this.toolStripEdit.Size = new System.Drawing.Size(36, 36);
 			this.toolStripEdit.Text = "Edytuj";
+			// 
+			// toolStripSeparator1
+			// 
+			this.toolStripSeparator1.Name = "toolStripSeparator1";
+			this.toolStripSeparator1.Size = new System.Drawing.Size(6, 39);
 			// 
 			// toolStripSongs
 			// 
@@ -196,16 +204,27 @@ namespace GuitarConcert
 			this.contextMenuItemEdit.Size = new System.Drawing.Size(107, 22);
 			this.contextMenuItemEdit.Text = "Edytuj";
 			// 
-			// toolStripSeparator1
+			// statusStrip1
 			// 
-			this.toolStripSeparator1.Name = "toolStripSeparator1";
-			this.toolStripSeparator1.Size = new System.Drawing.Size(6, 39);
+			this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			this.toolStripStatusLabel});
+			this.statusStrip1.Location = new System.Drawing.Point(0, 239);
+			this.statusStrip1.Name = "statusStrip1";
+			this.statusStrip1.Size = new System.Drawing.Size(914, 22);
+			this.statusStrip1.TabIndex = 2;
+			this.statusStrip1.Text = "statusStrip1";
+			// 
+			// toolStripStatusLabel
+			// 
+			this.toolStripStatusLabel.Name = "toolStripStatusLabel";
+			this.toolStripStatusLabel.Size = new System.Drawing.Size(0, 17);
 			// 
 			// SongsForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(914, 261);
+			this.Controls.Add(this.statusStrip1);
 			this.Controls.Add(this.listViewSongs);
 			this.Controls.Add(this.toolStrip1);
 			this.Name = "SongsForm";
@@ -213,6 +232,8 @@ namespace GuitarConcert
 			this.toolStrip1.ResumeLayout(false);
 			this.toolStrip1.PerformLayout();
 			this.songContextMenu.ResumeLayout(false);
+			this.statusStrip1.ResumeLayout(false);
+			this.statusStrip1.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -234,5 +255,7 @@ namespace GuitarConcert
 		private System.Windows.Forms.ToolStripMenuItem contextMenuItemDelete;
 		private System.Windows.Forms.ToolStripMenuItem contextMenuItemEdit;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+		private System.Windows.Forms.StatusStrip statusStrip1;
+		private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
 	}
 }

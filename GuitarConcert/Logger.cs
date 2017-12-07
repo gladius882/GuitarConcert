@@ -20,7 +20,7 @@ namespace GuitarConcert
 		{
 			System.IO.File.AppendAllLines(logFile, new string[] {
 				"----------------------------------------------------------------",
-				System.DateTime.Now.ToString(),
+				DateTime.Now.ToString() +":"+ DateTime.Now.Millisecond.ToString(),
 				exception.Message,
 				"HResult: " + exception.HResult.ToString(),
 				exception.StackTrace,
@@ -31,7 +31,7 @@ namespace GuitarConcert
 		{
 			System.IO.File.AppendAllLines(logFile, new string[] {
 				"----------------------------------------------------------------",
-				System.DateTime.Now.ToString(),
+				DateTime.Now.ToString() +":"+ DateTime.Now.Millisecond.ToString(),
 				message,
 				"",});
 		}

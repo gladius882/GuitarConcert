@@ -24,7 +24,7 @@ namespace GuitarConcert
 		public PlayConcertForm(Song sng)
 		{
 			InitializeComponent();
-			this.loadSong(sng);
+			this.LoadSong(sng);
 			
 			this.lyricsBox.Font = new Font(SettingsSingleton.Instance.option["lyricsFontName"], float.Parse(SettingsSingleton.Instance.option["fontSize"]), System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.tabBox.Font = new Font(SettingsSingleton.Instance.option["tabFontName"], float.Parse(SettingsSingleton.Instance.option["fontSize"]), System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -38,17 +38,13 @@ namespace GuitarConcert
 			timer.Tick += this.Delay;
 		}
 		
-		public void loadSong(Song sng)
+		public void LoadSong(Song sng)
 		{
 			this.currentSong = sng;
 			
 			try {
-				string content = File.ReadAllText(String.Format("{0}/{1} - {2}.{3}",
-				                                            SettingsSingleton.Instance.option["songDirectory"],
-				                                            sng.getString("songArtist"), sng.getString("songTitle"),
-				                                            SettingsSingleton.Instance.option["lyricsExtension"]));
 				this.lyricsBox.Clear();
-				this.lyricsBox.Text = content;
+				this.lyricsBox.Text = sng.Lyrics.Text;
 			}
 			catch(Exception exception) {
 				Logger.ToFile(exception);
@@ -103,6 +99,7 @@ namespace GuitarConcert
 		private void Delay(object sender, EventArgs e)
 		{
 			// TODO !!---- Refactoring ----!!
+			
 			if(tick >= currentSong.getInt("autoScrollDelay"))
 			{
 				int linesPerPage = lyricsBox.Height / (int.Parse(lyricsBox.Font.Size.ToString()) + lyricsBox.Margin.Vertical ) - 1;

@@ -5,12 +5,12 @@ songAlbum:No need to argue
 releaseYear:2000
 genre:Rock
 
-# usefull info
+# useful info
 difficulty:Easy
 tags:
 key:E
 metrum:4/4
-bpm:720
+bpm:120
 
 # play info
 autoScrollSpeed:4

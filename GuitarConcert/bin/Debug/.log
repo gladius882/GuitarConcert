@@ -1,283 +1,972 @@
 ----------------------------------------------------------------
-2017-12-03 14:30:23
-Nie można odnaleźć pliku 'C:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\bin\Debug\song\ - .gcl'.
-HResult: -2147024894
-   w System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   w System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   w System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   w System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
-   w System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
-   w System.IO.File.ReadAllText(String path)
-   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 42
+2017-12-07 17:40:58:136
+Tick
 
 ----------------------------------------------------------------
-2017-12-03 14:30:23
-Nie można odnaleźć pliku 'C:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\bin\Debug\song\ - .gct'.
-HResult: -2147024894
-   w System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   w System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   w System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   w System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
-   w System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
-   w System.IO.File.ReadAllText(String path)
-   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 56
+2017-12-07 17:40:58:511
+Tick
 
 ----------------------------------------------------------------
-2017-12-03 14:30:23
-Wartość nie może być zerowa.
-Nazwa parametru: item
-HResult: -2147467261
-   w System.Windows.Forms.ListBox.ObjectCollection.AddInternal(Object item)
-   w System.Windows.Forms.ListBox.ObjectCollection.Add(Object item)
-   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 69
+2017-12-07 17:40:59:11
+Tick
 
 ----------------------------------------------------------------
-2017-12-03 14:31:16
-Nie można odnaleźć pliku 'C:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\bin\Debug\song\ - .gcl'.
-HResult: -2147024894
-   w System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   w System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   w System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   w System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
-   w System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
-   w System.IO.File.ReadAllText(String path)
-   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 42
+2017-12-07 17:40:59:511
+Tick
 
 ----------------------------------------------------------------
-2017-12-03 14:31:16
-Nie można odnaleźć pliku 'C:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\bin\Debug\song\ - .gct'.
-HResult: -2147024894
-   w System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   w System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   w System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   w System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
-   w System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
-   w System.IO.File.ReadAllText(String path)
-   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 56
+2017-12-07 17:41:00:11
+Tick
 
 ----------------------------------------------------------------
-2017-12-03 14:31:16
-Wartość nie może być zerowa.
-Nazwa parametru: item
-HResult: -2147467261
-   w System.Windows.Forms.ListBox.ObjectCollection.AddInternal(Object item)
-   w System.Windows.Forms.ListBox.ObjectCollection.Add(Object item)
-   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 69
+2017-12-07 17:41:00:512
+Tick
 
 ----------------------------------------------------------------
-2017-12-03 14:31:31
-Nie można odnaleźć pliku 'C:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\bin\Debug\song\ - .gcl'.
-HResult: -2147024894
-   w System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   w System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   w System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   w System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
-   w System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
-   w System.IO.File.ReadAllText(String path)
-   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 42
+2017-12-07 17:41:01:11
+Tick
 
 ----------------------------------------------------------------
-2017-12-03 14:31:31
-Nie można odnaleźć pliku 'C:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\bin\Debug\song\ - .gct'.
-HResult: -2147024894
-   w System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   w System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   w System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   w System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
-   w System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
-   w System.IO.File.ReadAllText(String path)
-   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 56
+2017-12-07 17:41:01:512
+Tick
 
 ----------------------------------------------------------------
-2017-12-03 14:31:31
-Wartość nie może być zerowa.
-Nazwa parametru: item
-HResult: -2147467261
-   w System.Windows.Forms.ListBox.ObjectCollection.AddInternal(Object item)
-   w System.Windows.Forms.ListBox.ObjectCollection.Add(Object item)
-   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 69
+2017-12-07 17:41:02:12
+Tick
 
 ----------------------------------------------------------------
-2017-12-03 14:31:51
-Nie można odnaleźć pliku 'C:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\bin\Debug\song\ - .gcl'.
-HResult: -2147024894
-   w System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   w System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   w System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   w System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
-   w System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
-   w System.IO.File.ReadAllText(String path)
-   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 42
+2017-12-07 17:41:02:512
+Tick
 
 ----------------------------------------------------------------
-2017-12-03 14:31:51
-Nie można odnaleźć pliku 'C:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\bin\Debug\song\ - .gct'.
-HResult: -2147024894
-   w System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   w System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   w System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   w System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
-   w System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
-   w System.IO.File.ReadAllText(String path)
-   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 56
+2017-12-07 17:41:03:12
+Tick
 
 ----------------------------------------------------------------
-2017-12-03 14:31:51
-Wartość nie może być zerowa.
-Nazwa parametru: item
-HResult: -2147467261
-   w System.Windows.Forms.ListBox.ObjectCollection.AddInternal(Object item)
-   w System.Windows.Forms.ListBox.ObjectCollection.Add(Object item)
-   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 69
+2017-12-07 17:41:03:512
+Tick
 
 ----------------------------------------------------------------
-2017-12-03 14:32:15
-Nie można odnaleźć pliku 'C:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\bin\Debug\song\ - .gcl'.
-HResult: -2147024894
-   w System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   w System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   w System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   w System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
-   w System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
-   w System.IO.File.ReadAllText(String path)
-   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 42
+2017-12-07 17:41:04:12
+Tick
 
 ----------------------------------------------------------------
-2017-12-03 14:32:16
-Nie można odnaleźć pliku 'C:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\bin\Debug\song\ - .gct'.
-HResult: -2147024894
-   w System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   w System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   w System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   w System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
-   w System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
-   w System.IO.File.ReadAllText(String path)
-   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 56
+2017-12-07 17:41:04:512
+Tick
 
 ----------------------------------------------------------------
-2017-12-03 14:32:16
-Wartość nie może być zerowa.
-Nazwa parametru: item
-HResult: -2147467261
-   w System.Windows.Forms.ListBox.ObjectCollection.AddInternal(Object item)
-   w System.Windows.Forms.ListBox.ObjectCollection.Add(Object item)
-   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 69
+2017-12-07 17:41:05:12
+Tick
 
 ----------------------------------------------------------------
-2017-12-03 14:32:32
-Nie można odnaleźć pliku 'C:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\bin\Debug\song\ - .gcl'.
-HResult: -2147024894
-   w System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   w System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   w System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   w System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
-   w System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
-   w System.IO.File.ReadAllText(String path)
-   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 42
+2017-12-07 17:41:08:371
+Tick
 
 ----------------------------------------------------------------
-2017-12-03 14:32:32
-Nie można odnaleźć pliku 'C:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\bin\Debug\song\ - .gct'.
-HResult: -2147024894
-   w System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   w System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   w System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   w System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
-   w System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
-   w System.IO.File.ReadAllText(String path)
-   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 56
+2017-12-07 17:41:08:871
+Tick
 
 ----------------------------------------------------------------
-2017-12-03 14:32:32
-Wartość nie może być zerowa.
-Nazwa parametru: item
-HResult: -2147467261
-   w System.Windows.Forms.ListBox.ObjectCollection.AddInternal(Object item)
-   w System.Windows.Forms.ListBox.ObjectCollection.Add(Object item)
-   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 69
+2017-12-07 17:41:09:371
+Tick
 
 ----------------------------------------------------------------
-2017-12-03 14:32:46
-Nie można odnaleźć pliku 'C:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\bin\Debug\song\ - .gcl'.
-HResult: -2147024894
-   w System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   w System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   w System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   w System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
-   w System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
-   w System.IO.File.ReadAllText(String path)
-   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 42
+2017-12-07 17:41:09:871
+Tick
 
 ----------------------------------------------------------------
-2017-12-03 14:32:46
-Nie można odnaleźć pliku 'C:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\bin\Debug\song\ - .gct'.
-HResult: -2147024894
-   w System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   w System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   w System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   w System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
-   w System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
-   w System.IO.File.ReadAllText(String path)
-   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 56
+2017-12-07 17:41:10:371
+Tick
 
 ----------------------------------------------------------------
-2017-12-03 14:32:46
-Wartość nie może być zerowa.
-Nazwa parametru: item
-HResult: -2147467261
-   w System.Windows.Forms.ListBox.ObjectCollection.AddInternal(Object item)
-   w System.Windows.Forms.ListBox.ObjectCollection.Add(Object item)
-   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\PlayConcertForm.cs:wiersz 69
+2017-12-07 17:41:10:871
+Tick
 
 ----------------------------------------------------------------
-2017-12-05 19:16:12
-Dany klucz nie był obecny w słowniku.
-HResult: -2146232969
-   w System.ThrowHelper.ThrowKeyNotFoundException()
-   w System.Collections.Generic.Dictionary`2.get_Item(TKey key)
-   w GuitarConcert.Song.getInt(String key) w c:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\Song.cs:wiersz 43
+2017-12-07 17:41:11:371
+Tick
 
 ----------------------------------------------------------------
-2017-12-05 19:16:58
-Dany klucz nie był obecny w słowniku.
-HResult: -2146232969
-   w System.ThrowHelper.ThrowKeyNotFoundException()
-   w System.Collections.Generic.Dictionary`2.get_Item(TKey key)
-   w GuitarConcert.Song.getString(String key) w c:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\Song.cs:wiersz 32
+2017-12-07 17:41:11:871
+Tick
 
 ----------------------------------------------------------------
-2017-12-05 19:17:00
-Dany klucz nie był obecny w słowniku.
-HResult: -2146232969
-   w System.ThrowHelper.ThrowKeyNotFoundException()
-   w System.Collections.Generic.Dictionary`2.get_Item(TKey key)
-   w GuitarConcert.Song.getInt(String key) w c:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\Song.cs:wiersz 43
+2017-12-07 17:41:12:371
+Tick
 
 ----------------------------------------------------------------
-2017-12-06 18:23:43
-Indeks wykraczał poza granice tablicy.
-HResult: -2146233080
-   w System.Array.InternalGetReference(Void* elemRef, Int32 rank, Int32* pIndices)
-   w System.Array.SetValue(Object value, Int32 index)
-   w GuitarConcert.PlayConcertForm.loadSong(Song sng) w c:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\View\PlayConcertForm.cs:wiersz 56
+2017-12-07 17:41:12:871
+Tick
 
 ----------------------------------------------------------------
-2017-12-06 18:34:15
-k: 51, k2: 109
+2017-12-07 17:41:13:371
+Tick
 
 ----------------------------------------------------------------
-2017-12-06 18:34:58
-k: 51, k2: 109
+2017-12-07 17:41:13:871
+Tick
 
 ----------------------------------------------------------------
-2017-12-06 18:35:59
-k: 51, k2: 109
+2017-12-07 17:41:14:372
+Tick
 
 ----------------------------------------------------------------
-2017-12-06 18:41:26
-k: 60, k2: 118
+2017-12-07 17:41:14:872
+Tick
 
 ----------------------------------------------------------------
-2017-12-06 18:45:08
-k: 116, k2: 118
+2017-12-07 17:41:15:372
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:15:872
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:16:372
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:16:872
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:17:372
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:17:872
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:18:372
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:18:872
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:19:372
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:19:872
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:20:372
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:20:872
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:21:372
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:21:872
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:22:372
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:22:872
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:23:372
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:23:872
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:24:372
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:24:872
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:25:372
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:25:872
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:26:372
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:26:872
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:27:372
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:27:872
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:28:372
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:28:872
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:29:372
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:33:122
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:33:622
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:34:122
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:34:622
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:35:122
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:35:623
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:36:123
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:36:623
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:37:123
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:37:623
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:38:123
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:38:623
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:39:123
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:39:623
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:40:123
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:40:623
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:41:123
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:41:623
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:42:123
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:42:623
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:43:123
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:43:623
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:44:123
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:44:623
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:45:123
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:45:623
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:46:123
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:46:623
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:47:123
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:47:623
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:48:123
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:48:623
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:49:123
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:49:623
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:50:123
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:50:623
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:51:123
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:51:623
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:52:123
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:52:623
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:53:123
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:53:623
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:54:123
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:54:623
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:55:123
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:55:623
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:56:124
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:56:624
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:57:124
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:57:624
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:58:124
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:58:624
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:59:124
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:41:59:624
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:00:124
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:00:624
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:01:124
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:01:624
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:02:124
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:02:624
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:03:124
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:03:624
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:04:124
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:04:624
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:05:124
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:05:624
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:06:124
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:06:624
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:07:124
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:07:624
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:08:124
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:08:624
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:09:124
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:09:624
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:10:124
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:10:624
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:11:124
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:11:624
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:12:124
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:12:624
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:13:124
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:13:624
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:14:124
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:14:624
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:15:124
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:15:624
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:16:124
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:16:624
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:17:124
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:17:624
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:18:125
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:18:625
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:19:125
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:19:625
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:20:125
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:20:625
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:21:125
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:21:625
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:22:125
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:22:625
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:23:125
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:23:625
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:24:125
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:24:625
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:25:125
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:25:625
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:26:125
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:26:625
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:27:125
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:27:625
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:28:125
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:28:625
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:29:125
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:29:625
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:30:125
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:30:625
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:31:125
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:31:625
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:32:125
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:32:625
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:33:125
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:33:625
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:34:125
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:34:625
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:35:125
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:35:625
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:36:125
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:36:625
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:37:125
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:37:625
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:38:125
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:38:625
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:39:125
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:39:626
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:40:126
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:40:626
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:41:126
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:41:626
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:42:126
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:42:626
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:43:126
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:43:626
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:44:126
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:44:626
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:45:126
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:45:626
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:46:126
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:46:626
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:47:126
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:47:626
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:48:126
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:48:626
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:49:126
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:49:626
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:50:126
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:50:626
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:51:126
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:51:626
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:52:126
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:52:626
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:53:126
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:53:626
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:54:126
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:54:626
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:55:126
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:55:626
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:56:126
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:56:626
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:57:126
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:57:626
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:58:126
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:58:626
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:59:126
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:42:59:626
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:43:00:126
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:43:00:626
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:43:01:127
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:43:01:627
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:43:02:126
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:43:02:627
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:43:03:127
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:43:03:627
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:43:04:127
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:43:04:627
+Tick
+
+----------------------------------------------------------------
+2017-12-07 17:43:05:127
+Tick
 

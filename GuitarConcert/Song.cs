@@ -19,6 +19,7 @@ namespace GuitarConcert
 	{
 		public readonly string errorString;
 		public ChordsSongBook SongBook;
+		public SongLyrics Lyrics;
 		private Dictionary<string, string> info;
 		
 		public Song(string fileName)
@@ -28,6 +29,9 @@ namespace GuitarConcert
 			
 			this.SongBook = new ChordsSongBook();
 			this.SongBook.Load(info["songTitle"], info["songArtist"]);
+			
+			this.Lyrics = new SongLyrics();
+			this.Lyrics.Load(info["songTitle"], info["songArtist"]);
 		}
 		
 		public string getString(string key)
