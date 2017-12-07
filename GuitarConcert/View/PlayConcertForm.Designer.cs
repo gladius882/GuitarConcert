@@ -30,6 +30,7 @@ namespace GuitarConcert
 		private System.Windows.Forms.Timer timer;
 		private System.Windows.Forms.ListBox chordsListBox;
 		private System.Windows.Forms.ToolStripButton toolStripStop;
+		private System.Windows.Forms.ToolStripButton toolStripPause;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -60,6 +61,7 @@ namespace GuitarConcert
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
 			this.toolStripPlay = new System.Windows.Forms.ToolStripButton();
+			this.toolStripPause = new System.Windows.Forms.ToolStripButton();
 			this.toolStripStop = new System.Windows.Forms.ToolStripButton();
 			this.splitContainer2 = new System.Windows.Forms.SplitContainer();
 			this.splitContainer6 = new System.Windows.Forms.SplitContainer();
@@ -169,6 +171,7 @@ namespace GuitarConcert
 			this.toolStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
 			this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
 			this.toolStripPlay,
+			this.toolStripPause,
 			this.toolStripStop});
 			this.toolStrip1.Location = new System.Drawing.Point(0, 0);
 			this.toolStrip1.Name = "toolStrip1";
@@ -185,6 +188,16 @@ namespace GuitarConcert
 			this.toolStripPlay.Size = new System.Drawing.Size(36, 36);
 			this.toolStripPlay.Text = "Play";
 			this.toolStripPlay.Click += new System.EventHandler(this.ToolStripPlayClick);
+			// 
+			// toolStripPause
+			// 
+			this.toolStripPause.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripPause.Image = ((System.Drawing.Image)(resources.GetObject("toolStripPause.Image")));
+			this.toolStripPause.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripPause.Name = "toolStripPause";
+			this.toolStripPause.Size = new System.Drawing.Size(36, 36);
+			this.toolStripPause.Text = "Pauza";
+			this.toolStripPause.Click += new System.EventHandler(this.ToolStripPauseClick);
 			// 
 			// toolStripStop
 			// 

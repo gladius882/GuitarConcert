@@ -25,16 +25,21 @@ namespace GuitarConcert
 		
 		public void Load(string title, string band)
 		{
-			string content = File.ReadAllText(String.Format("{0}/{1} - {2}.{3}",
+			try {
+				string content = File.ReadAllText(String.Format("{0}/{1} - {2}.{3}",
 					SettingsSingleton.Instance.option["songDirectory"],
 					band, title,
 					SettingsSingleton.Instance.option["chordsExtension"]));
 			
-			string[] chords = content.Split(';');
-			
-			foreach(string chrd in chords)
-			{
-				ChordsList.Add(chrd);
+				string[] chords = content.Split(';');
+				
+				foreach(string chrd in chords)
+				{
+					ChordsList.Add(chrd);
+				}
+			}
+			catch(Exception exception) {
+				Logger.ToFile(exception);
 			}
 			
 		}

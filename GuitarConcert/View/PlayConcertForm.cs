@@ -42,13 +42,11 @@ namespace GuitarConcert
 		{
 			this.currentSong = sng;
 			
-			try {
-				this.lyricsBox.Clear();
-				this.lyricsBox.Text = sng.Lyrics.Text;
-			}
-			catch(Exception exception) {
-				Logger.ToFile(exception);
-			}
+			this.LoadCover();
+			this.LoadDetails();
+			
+			this.lyricsBox.Clear();
+			this.lyricsBox.Text = sng.Lyrics.Text;
 			
 			
 			this.chordsListBox.Items.Clear();
@@ -58,6 +56,7 @@ namespace GuitarConcert
 			}
 			
 			
+			// TODO Move to Tablature class
 			try {
 				string tab = File.ReadAllText(String.Format("{0}/{1} - {2}.{3}",
 				                                            SettingsSingleton.Instance.option["songDirectory"],
@@ -70,26 +69,25 @@ namespace GuitarConcert
 			catch(Exception exception) {
 				Logger.ToFile(exception);
 			}
-			
-			try {
-				this.pictureBox1.ImageLocation = "assets/covers/"+sng.getString("songArtist")+" - "+sng.getString("songAlbum")+".jpg";
-			}
-			catch(Exception exception) {
-				Logger.ToFile(exception);
-			}
-			
-			try {
-				this.detailsList.Items.Add(sng.getString("songTitle"));
-				this.detailsList.Items.Add(sng.getString("songArtist"));
-				this.detailsList.Items.Add(sng.getString("songAlbum")+" ("+sng.getString("releaseYear")+")");
-				this.detailsList.Items.Add(String.Empty);
-				this.detailsList.Items.Add("Gatunek: " + sng.getString("genre"));
-				this.detailsList.Items.Add("Metrum: " + sng.getString("metrum"));
-			}
-			catch(Exception exception) {
-				Logger.ToFile(exception);
-			}
 		}
+		
+		void LoadCover()
+		{
+			this.pictureBox1.ImageLocation = "assets/covers/"+
+				currentSong.getString("songArtist")+" - "+
+				currentSong.getString("songAlbum")+".jpg";
+		}
+		
+		void LoadDetails()
+		{
+			this.detailsList.Items.Add(currentSong.getString("songTitle"));
+			this.detailsList.Items.Add(currentSong.getString("songArtist"));
+			this.detailsList.Items.Add(currentSong.getString("songAlbum")+" ("+currentSong.getString("releaseYear")+")");
+			this.detailsList.Items.Add(String.Empty);
+			this.detailsList.Items.Add("Gatunek: " + currentSong.getString("genre"));
+			this.detailsList.Items.Add("Metrum: " + currentSong.getString("metrum"));
+		}
+		
 		void ToolStripPlayClick(object sender, EventArgs e)
 		{
 			this.timer.Interval = 60000 / this.currentSong.getInt("bpm");
@@ -97,9 +95,7 @@ namespace GuitarConcert
 		}
 		
 		private void Delay(object sender, EventArgs e)
-		{
-			// TODO !!---- Refactoring ----!!
-			
+		{	
 			if(tick >= currentSong.getInt("autoScrollDelay"))
 			{
 				int linesPerPage = lyricsBox.Height / (int.Parse(lyricsBox.Font.Size.ToString()) + lyricsBox.Margin.Vertical ) - 1;
@@ -119,6 +115,7 @@ namespace GuitarConcert
 				if(selectedValue != String.Empty)
 				{
 					Chord chrd = new Chord(selectedValue);
+					this.currentChord = chrd;
 					this.chordDiagramPicture.Image = chrd.CreateBitmap();
 				}
 			}
@@ -139,6 +136,11 @@ namespace GuitarConcert
 			this.tick = 0;
 			ScrollLyricsToLine(1);
 			SelectChordsLine(1);
+		}
+		
+		void ToolStripPauseClick(object sender, EventArgs e)
+		{
+			timer.Stop();
 		}
 		
 		void SelectChordsLine(int line)

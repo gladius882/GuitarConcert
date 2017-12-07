@@ -73,6 +73,16 @@ namespace GuitarConcert.View {
 		/// <summary>
 		///   Looks up a localized resource of type System.Drawing.Bitmap.
 		/// </summary>
+		internal static System.Drawing.Bitmap toolStripPause_Image {
+			get {
+				object obj = ResourceManager.GetObject("toolStripPause.Image", resourceCulture);
+				return ((System.Drawing.Bitmap)(obj));
+			}
+		}
+		
+		/// <summary>
+		///   Looks up a localized resource of type System.Drawing.Bitmap.
+		/// </summary>
 		internal static System.Drawing.Bitmap toolStripPlay_Image {
 			get {
 				object obj = ResourceManager.GetObject("toolStripPlay.Image", resourceCulture);

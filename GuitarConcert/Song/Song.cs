@@ -17,21 +17,21 @@ namespace GuitarConcert
 	/// </summary>
 	public class Song
 	{
+		private Dictionary<string, string> info;
+		
 		public readonly string errorString;
 		public ChordsSongBook SongBook;
-		public SongLyrics Lyrics;
-		private Dictionary<string, string> info;
+		public Lyrics Lyrics;
 		
 		public Song(string fileName)
 		{
-			this.errorString = "undefined";
+			this.errorString = "None";
 			this.info = IniFile.ReadOptions(fileName);
 			
 			this.SongBook = new ChordsSongBook();
-			this.SongBook.Load(info["songTitle"], info["songArtist"]);
+			this.SongBook.Load(getString("songTitle"), getString("songArtist"));
 			
-			this.Lyrics = new SongLyrics();
-			this.Lyrics.Load(info["songTitle"], info["songArtist"]);
+			this.Lyrics = new Lyrics(getString("songTitle"), getString("songArtist"));
 		}
 		
 		public string getString(string key)
@@ -65,6 +65,11 @@ namespace GuitarConcert
 				Logger.ToFile(exception);
 				return -1;
 			}
+		}
+		
+		public void PlayMidi()
+		{
+			// TODO Play midi from file
 		}
 		
 		public void PlayMP3()
