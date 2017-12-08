@@ -77,7 +77,7 @@ namespace GuitarConcert
 			PlayConcertForm form = new PlayConcertForm(sng);
 			
 			MainForm main = (MainForm)this.MdiParent;
-			main.loadView(form);
+			main.LoadView(form);
 		}
 		
 		void ToolStripSongsClick(object sender, EventArgs e)

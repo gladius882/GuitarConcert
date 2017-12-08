@@ -27,10 +27,10 @@ namespace GuitarConcert
 			InitializeComponent();
 			
 			View  = new SongsForm();
-			this.loadView(View);
+			this.LoadView(View);
 		}
 		
-		public void loadView(Form view)
+		public void LoadView(Form view)
 		{
 			this.CloseAllMdiChilds();
 			

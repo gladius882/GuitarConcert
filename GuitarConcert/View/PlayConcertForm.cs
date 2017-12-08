@@ -165,5 +165,11 @@ namespace GuitarConcert
 			lyricsBox.SelectionStart = offset;
 			lyricsBox.ScrollToCaret();
 		}
+		
+		void ToolStripBackClick(object sender, EventArgs e)
+		{
+			MainForm parent = (MainForm)this.MdiParent;
+			parent.LoadView(new SongsForm());
+		}
 	}
 }

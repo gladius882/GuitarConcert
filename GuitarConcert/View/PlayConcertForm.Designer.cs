@@ -31,6 +31,8 @@ namespace GuitarConcert
 		private System.Windows.Forms.ListBox chordsListBox;
 		private System.Windows.Forms.ToolStripButton toolStripStop;
 		private System.Windows.Forms.ToolStripButton toolStripPause;
+		private System.Windows.Forms.ToolStrip toolStrip2;
+		private System.Windows.Forms.ToolStripButton toolStripBack;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -59,6 +61,8 @@ namespace GuitarConcert
 			this.splitContainer3 = new System.Windows.Forms.SplitContainer();
 			this.detailsList = new System.Windows.Forms.ListBox();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.toolStrip2 = new System.Windows.Forms.ToolStrip();
+			this.toolStripBack = new System.Windows.Forms.ToolStripButton();
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
 			this.toolStripPlay = new System.Windows.Forms.ToolStripButton();
 			this.toolStripPause = new System.Windows.Forms.ToolStripButton();
@@ -82,6 +86,7 @@ namespace GuitarConcert
 			this.splitContainer3.Panel2.SuspendLayout();
 			this.splitContainer3.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			this.toolStrip2.SuspendLayout();
 			this.toolStrip1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
 			this.splitContainer2.Panel1.SuspendLayout();
@@ -133,6 +138,7 @@ namespace GuitarConcert
 			// 
 			// splitContainer3.Panel2
 			// 
+			this.splitContainer3.Panel2.Controls.Add(this.toolStrip2);
 			this.splitContainer3.Panel2.Controls.Add(this.toolStrip1);
 			this.splitContainer3.Size = new System.Drawing.Size(242, 592);
 			this.splitContainer3.SplitterDistance = 387;
@@ -165,6 +171,27 @@ namespace GuitarConcert
 			this.pictureBox1.TabIndex = 0;
 			this.pictureBox1.TabStop = false;
 			this.pictureBox1.WaitOnLoad = true;
+			// 
+			// toolStrip2
+			// 
+			this.toolStrip2.ImageScalingSize = new System.Drawing.Size(36, 36);
+			this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			this.toolStripBack});
+			this.toolStrip2.Location = new System.Drawing.Point(0, 39);
+			this.toolStrip2.Name = "toolStrip2";
+			this.toolStrip2.Size = new System.Drawing.Size(242, 43);
+			this.toolStrip2.TabIndex = 1;
+			this.toolStrip2.Text = "toolStrip2";
+			// 
+			// toolStripBack
+			// 
+			this.toolStripBack.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripBack.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBack.Image")));
+			this.toolStripBack.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripBack.Name = "toolStripBack";
+			this.toolStripBack.Size = new System.Drawing.Size(40, 40);
+			this.toolStripBack.Text = "Wstecz";
+			this.toolStripBack.Click += new System.EventHandler(this.ToolStripBackClick);
 			// 
 			// toolStrip1
 			// 
@@ -357,6 +384,8 @@ namespace GuitarConcert
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
 			this.splitContainer3.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			this.toolStrip2.ResumeLayout(false);
+			this.toolStrip2.PerformLayout();
 			this.toolStrip1.ResumeLayout(false);
 			this.toolStrip1.PerformLayout();
 			this.splitContainer2.Panel1.ResumeLayout(false);
