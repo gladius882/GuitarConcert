@@ -23,13 +23,10 @@ namespace GuitarConcert
 			ChordsList = new List<string>();
 		}
 		
-		public void Load(string title, string band)
+		public void Load(string fileName)
 		{
 			try {
-				string content = File.ReadAllText(String.Format("{0}/{1} - {2}.{3}",
-					SettingsSingleton.Instance.option["songDirectory"],
-					band, title,
-					SettingsSingleton.Instance.option["chordsExtension"]));
+				string content = File.ReadAllText(fileName);
 			
 				string[] chords = content.Split(';');
 				

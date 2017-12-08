@@ -1030,3 +1030,48 @@ HResult: -2147024894
    w System.IO.File.ReadAllText(String path)
    w GuitarConcert.PlayConcertForm.LoadSong(Song sng) w c:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\View\PlayConcertForm.cs:wiersz 61
 
+----------------------------------------------------------------
+2017-12-08 19:36:23:778
+Dane na poziomie głównym są nieprawidłowe. wiersz 1, pozycja 1.
+HResult: -2146232000
+   w System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   w System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   w System.Xml.XmlTextReaderImpl.Throw(String res)
+   w System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   w System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   w System.Xml.XmlTextReaderImpl.Read()
+   w System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   w System.Xml.XmlDocument.Load(XmlReader reader)
+   w System.Xml.XmlDocument.LoadXml(String xml)
+   w GuitarConcert.Chord.Load(String chordName) w c:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\Song\Chord.cs:wiersz 43
+
+----------------------------------------------------------------
+2017-12-08 19:36:25:858
+Dane na poziomie głównym są nieprawidłowe. wiersz 1, pozycja 1.
+HResult: -2146232000
+   w System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   w System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   w System.Xml.XmlTextReaderImpl.Throw(String res)
+   w System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   w System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   w System.Xml.XmlTextReaderImpl.Read()
+   w System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   w System.Xml.XmlDocument.Load(XmlReader reader)
+   w System.Xml.XmlDocument.LoadXml(String xml)
+   w GuitarConcert.Chord.Load(String chordName) w c:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\Song\Chord.cs:wiersz 43
+
+----------------------------------------------------------------
+2017-12-08 19:36:27:598
+Dane na poziomie głównym są nieprawidłowe. wiersz 1, pozycja 1.
+HResult: -2146232000
+   w System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   w System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   w System.Xml.XmlTextReaderImpl.Throw(String res)
+   w System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   w System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   w System.Xml.XmlTextReaderImpl.Read()
+   w System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   w System.Xml.XmlDocument.Load(XmlReader reader)
+   w System.Xml.XmlDocument.LoadXml(String xml)
+   w GuitarConcert.Chord.Load(String chordName) w c:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\Song\Chord.cs:wiersz 43
+

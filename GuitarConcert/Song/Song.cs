@@ -29,7 +29,7 @@ namespace GuitarConcert
 			this.info = IniFile.ReadOptions(fileName);
 			
 			this.SongBook = new ChordsSongBook();
-			this.SongBook.Load(getString("songTitle"), getString("songArtist"));
+			this.SongBook.Load(PathBuilder.SongChordsPath(this));
 			
 			this.Lyrics = new Lyrics(getString("songTitle"), getString("songArtist"));
 		}

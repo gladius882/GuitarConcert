@@ -72,10 +72,7 @@ namespace GuitarConcert
 			string artist = this.listViewSongs.SelectedItems[0].SubItems[0].Text;
 			string title = this.listViewSongs.SelectedItems[0].SubItems[1].Text;
 			
-			Song sng = new Song(String.Format("{0}/{1} - {2}.{3}",
-			                                  SettingsSingleton.Instance.option["songDirectory"],
-			                                  artist, title,
-			                                  SettingsSingleton.Instance.option["songInfoExtension"]));
+			Song sng = new Song(PathBuilder.SongInfoPath(artist, title));
 			
 			PlayConcertForm form = new PlayConcertForm(sng);
 			

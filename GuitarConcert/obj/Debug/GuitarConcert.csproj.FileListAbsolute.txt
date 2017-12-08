@@ -50,13 +50,13 @@ C:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\obj\Debug\GuitarConce
 C:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\obj\Debug\GuitarConcert.csproj.GenerateResource.Cache
 C:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\obj\Debug\GuitarConcert.exe
 C:\Users\gladius882\Desktop\C#\GuitarConcert\GuitarConcert\obj\Debug\GuitarConcert.pdb
-C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\bin\Debug\GuitarConcert.exe
-C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\bin\Debug\GuitarConcert.pdb
 C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\obj\Debug\GuitarConcert.csprojResolveAssemblyReference.cache
 C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\obj\Debug\GuitarConcert.MainForm.resources
 C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\obj\Debug\GuitarConcert.PlayConcertForm.resources
 C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\obj\Debug\GuitarConcert.SettingsForm.resources
 C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\obj\Debug\GuitarConcert.SongsForm.resources
 C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\obj\Debug\GuitarConcert.csproj.GenerateResource.Cache
+C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\bin\Debug\GuitarConcert.exe
+C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\bin\Debug\GuitarConcert.pdb
 C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\obj\Debug\GuitarConcert.exe
 C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\obj\Debug\GuitarConcert.pdb

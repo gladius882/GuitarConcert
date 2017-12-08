@@ -27,16 +27,13 @@ namespace GuitarConcert
 		public Lyrics(string title, string artist)
 		{
 			this.NoLyricsString = "[BRAK TEKSTU]";
-			this.Load(title, artist);
+			this.Load(PathBuilder.SongLyricsPath(artist, title));
 		}
 		
-		public void Load(string title, string artist)
+		public void Load(string fileName)
 		{
 			try {
-				string content = File.ReadAllText(String.Format("{0}/{1} - {2}.{3}",
-					SettingsSingleton.Instance.option["songDirectory"],
-					artist, title,
-					SettingsSingleton.Instance.option["lyricsExtension"]));
+				string content = File.ReadAllText(fileName);
 				
 				this.Text = content;
 			}
