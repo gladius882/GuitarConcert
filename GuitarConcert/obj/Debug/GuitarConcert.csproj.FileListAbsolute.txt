@@ -60,3 +60,6 @@ C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\bin\Debug\GuitarConc
 C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\bin\Debug\GuitarConcert.pdb
 C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\obj\Debug\GuitarConcert.exe
 C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\obj\Debug\GuitarConcert.pdb
+C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\bin\Debug\Sanford.Multimedia.Midi.dll
+C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\bin\Debug\Sanford.Multimedia.Midi.pdb
+C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\bin\Debug\Sanford.Multimedia.Midi.xml

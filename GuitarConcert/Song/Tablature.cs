@@ -6,6 +6,7 @@
  * 
  */
 using System;
+using System.Collections.Generic;
 
 namespace GuitarConcert
 {
@@ -14,10 +15,17 @@ namespace GuitarConcert
 	/// </summary>
 	public class Tablature
 	{
-		string Title;
+		public string Title;
+		public string Tuning;
 		
-		public Tablature()
+		public string[] Content;
+		
+		public Tablature(string tabString)
 		{
+			Title = IniFile.ReadOption(tabString, "tabTitle");
+			Tuning = IniFile.ReadOption(tabString, "guitarTuning");
+			
+			Content = tabString.Split(',')[1].Split('\n');
 		}
 	}
 }

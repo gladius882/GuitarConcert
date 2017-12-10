@@ -33,7 +33,7 @@ namespace GuitarConcert
 		private SettingsSingleton()
 		{
 			try {
-				option = IniFile.ReadOptions(settingsPath);
+				option = IniFile.ReadAllOptions(settingsPath);
 			}
 			catch(Exception exception) {
 				MessageBox.Show("Cannot find the settings.ini file in application directory or this file is broken. " +

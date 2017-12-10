@@ -30,19 +30,19 @@ namespace GuitarConcert
 		public SongsForm()
 		{
 			InitializeComponent();
-			onCreate();
+			OnCreate();
 			this.parent = (MainForm)this.MdiParent;
 			CurrentList = List.SONGS;
 		}
 		
-		private void onCreate()
+		private void OnCreate()
 		{
-			this.calcColummnsWidth();
-			this.loadList(SettingsSingleton.Instance.option["songsListPath"]);
+			this.CalcColummnsWidth();
+			this.LoadList(SettingsSingleton.Instance.option["songsListPath"]);
 			this.listViewSongs.Font = new Font(SettingsSingleton.Instance.option["fontName"], float.Parse(SettingsSingleton.Instance.option["fontSize"]), System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 		}
 		
-		private void calcColummnsWidth()
+		private void CalcColummnsWidth()
 		{
 			int windowWidth = Screen.PrimaryScreen.WorkingArea.Width;
 			
@@ -53,7 +53,7 @@ namespace GuitarConcert
 			this.songTab.Width = (int)(0.048*windowWidth);
 		}
 		
-		private void loadList(string fileName)
+		private void LoadList(string fileName)
 		{
 			this.listViewSongs.Items.Clear();
 			string[] songs = File.ReadAllLines(fileName);	
@@ -82,13 +82,13 @@ namespace GuitarConcert
 		
 		void ToolStripSongsClick(object sender, EventArgs e)
 		{
-			this.loadList(SettingsSingleton.Instance.option["songsListPath"]);
+			this.LoadList(SettingsSingleton.Instance.option["songsListPath"]);
 			CurrentList = List.SONGS;
 		}
 		
 		void ToolStripWishlistClick(object sender, EventArgs e)
 		{
-			this.loadList(SettingsSingleton.Instance.option["wishListPath"]);
+			this.LoadList(SettingsSingleton.Instance.option["wishListPath"]);
 			CurrentList = List.WISHLIST;
 		}
 	}

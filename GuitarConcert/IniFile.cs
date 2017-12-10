@@ -16,10 +16,17 @@ namespace GuitarConcert
 	/// </summary>
 	public class IniFile
 	{
-		public static Dictionary<string, string> ReadOptions(string fileName)
+		public static Dictionary<string, string> ReadAllOptions(string fileName)
 		{	
 			Dictionary<string, string> result = new Dictionary<string, string>();
-			string[] lines = File.ReadAllLines(fileName);
+			string[] lines = new string[0];
+			
+			if(File.Exists(fileName)) {
+				lines = File.ReadAllLines(fileName);
+			} else {
+				lines = fileName.Split('\n');
+			}
+			
 			
 			foreach(string line in lines)
 			{
@@ -30,6 +37,30 @@ namespace GuitarConcert
 			}
 			
 			return result;
+		}
+		
+		public static string ReadOption(string fileName, string key)
+		{
+			string[] lines = new string[0];
+			
+			if(File.Exists(fileName)) {
+				lines = File.ReadAllLines(fileName);
+			} else {
+				lines = fileName.Split('\n');
+			}
+			
+			foreach(string line in lines)
+			{
+				if(ValidateOptionLine(line) == true) {
+					string[] opt = line.Trim().Split(':');
+					
+					if(opt[0] == key) {
+						return opt[1];
+					}
+				}
+			}
+			
+			return String.Empty;
 		}
 		
 		private static bool ValidateOptionLine(string line)

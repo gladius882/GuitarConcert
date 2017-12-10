@@ -26,7 +26,7 @@ namespace GuitarConcert
 		public Song(string fileName)
 		{
 			this.errorString = "None";
-			this.info = IniFile.ReadOptions(fileName);
+			this.info = IniFile.ReadAllOptions(fileName);
 			
 			this.SongBook = new ChordsSongBook();
 			this.SongBook.Load(PathBuilder.SongChordsPath(this));

@@ -28,6 +28,8 @@ namespace GuitarConcert
 			
 			View  = new SongsForm();
 			this.LoadView(View);
+			
+			
 		}
 		
 		public void LoadView(Form view)
