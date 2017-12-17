@@ -30,6 +30,7 @@ namespace GuitarConcert
 			this.LoadView(View);
 			
 			
+			
 		}
 		
 		public void LoadView(Form view)

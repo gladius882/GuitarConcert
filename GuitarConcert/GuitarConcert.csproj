@@ -50,16 +50,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IniFile.cs" />
-    <Compile Include="Logger.cs" />
+    <Compile Include="Helpers\GcFile.cs" />
+    <Compile Include="Helpers\IniFile.cs" />
+    <Compile Include="Helpers\Logger.cs" />
+    <Compile Include="Helpers\PathBuilder.cs" />
+    <Compile Include="Helpers\SettingsSingleton.cs" />
     <Compile Include="MainForm.cs" />
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PathBuilder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SettingsSingleton.cs" />
     <Compile Include="Song\Chord.cs" />
     <Compile Include="Song\ChordsSongBook.cs" />
     <Compile Include="Song\Song.cs" />
@@ -99,6 +100,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Helpers" />
     <Folder Include="Song" />
     <Folder Include="View" />
   </ItemGroup>
