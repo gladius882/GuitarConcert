@@ -38,7 +38,13 @@ namespace GuitarConcert
 		private void OnCreate()
 		{
 			this.CalcColummnsWidth();
-			this.LoadList(SettingsSingleton.Instance.option["songsListPath"]);
+			string listName = SettingsSingleton.Instance.option["defaultList"];
+			
+			if(listName.ToUpper() == "SONGS")
+				this.LoadList(SettingsSingleton.Instance.option["songsListPath"]);
+			else if(listName.ToUpper() == "WISHLIST")
+				this.LoadList(SettingsSingleton.Instance.option["wishListPath"]);
+			
 			this.listViewSongs.Font = new Font(SettingsSingleton.Instance.option["fontName"], float.Parse(SettingsSingleton.Instance.option["fontSize"]), System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 		}
 		
@@ -63,6 +69,8 @@ namespace GuitarConcert
 				if(row == String.Empty)
 					continue;
 				string[] details = row.Split(';');
+				if(details.Length != 3)
+					continue;
 				this.listViewSongs.Items.Add(new ListViewItem(details));
 			}
 			
@@ -114,6 +122,8 @@ namespace GuitarConcert
 				content = content.Replace(rowString, "");
 				
 				File.WriteAllText(file, content);
+				
+				this.listViewSongs.Items.Remove(new ListViewItem(rowString));
 				
 				this.LoadList(file);
 			}

@@ -185,24 +185,25 @@ namespace GuitarConcert
 			this.contextMenuItemDelete,
 			this.contextMenuItemEdit});
 			this.songContextMenu.Name = "contextMenuStrip1";
-			this.songContextMenu.Size = new System.Drawing.Size(108, 70);
+			this.songContextMenu.Size = new System.Drawing.Size(153, 92);
 			// 
 			// contextMenuItemAdd
 			// 
 			this.contextMenuItemAdd.Name = "contextMenuItemAdd";
-			this.contextMenuItemAdd.Size = new System.Drawing.Size(107, 22);
+			this.contextMenuItemAdd.Size = new System.Drawing.Size(152, 22);
 			this.contextMenuItemAdd.Text = "Dodaj";
 			// 
 			// contextMenuItemDelete
 			// 
 			this.contextMenuItemDelete.Name = "contextMenuItemDelete";
-			this.contextMenuItemDelete.Size = new System.Drawing.Size(107, 22);
+			this.contextMenuItemDelete.Size = new System.Drawing.Size(152, 22);
 			this.contextMenuItemDelete.Text = "Usuń";
+			this.contextMenuItemDelete.Click += new System.EventHandler(this.ToolStripDeleteClick);
 			// 
 			// contextMenuItemEdit
 			// 
 			this.contextMenuItemEdit.Name = "contextMenuItemEdit";
-			this.contextMenuItemEdit.Size = new System.Drawing.Size(107, 22);
+			this.contextMenuItemEdit.Size = new System.Drawing.Size(152, 22);
 			this.contextMenuItemEdit.Text = "Edytuj";
 			// 
 			// statusStrip1
