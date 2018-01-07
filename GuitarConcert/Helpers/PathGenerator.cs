@@ -12,9 +12,9 @@ namespace GuitarConcert
 	/// <summary>
 	/// Description of PathBuilder.
 	/// </summary>
-	public class PathBuilder
+	public class PathGenerator
 	{
-		public PathBuilder()
+		public PathGenerator()
 		{
 		}
 		

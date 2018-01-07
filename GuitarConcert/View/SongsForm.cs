@@ -10,7 +10,7 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 using System.IO;
-
+using Sanford.Multimedia.Midi;
 namespace GuitarConcert
 {
 	public enum List
@@ -60,6 +60,8 @@ namespace GuitarConcert
 			
 			foreach(string row in songs)
 			{
+				if(row == String.Empty)
+					continue;
 				string[] details = row.Split(';');
 				this.listViewSongs.Items.Add(new ListViewItem(details));
 			}
@@ -72,7 +74,7 @@ namespace GuitarConcert
 			string artist = this.listViewSongs.SelectedItems[0].SubItems[0].Text;
 			string title = this.listViewSongs.SelectedItems[0].SubItems[1].Text;
 			
-			Song sng = new Song(PathBuilder.SongInfoPath(artist, title));
+			Song sng = new Song(PathGenerator.SongInfoPath(artist, title));
 			
 			PlayConcertForm form = new PlayConcertForm(sng);
 			
@@ -90,6 +92,31 @@ namespace GuitarConcert
 		{
 			this.LoadList(SettingsSingleton.Instance.option["wishListPath"]);
 			CurrentList = List.WISHLIST;
+		}
+		void ToolStripDeleteClick(object sender, EventArgs e)
+		{
+			if(this.listViewSongs.SelectedItems.Count != 0)
+			{
+				string artist = this.listViewSongs.SelectedItems[0].SubItems[0].Text;
+				string title = this.listViewSongs.SelectedItems[0].SubItems[1].Text;
+				string album = this.listViewSongs.SelectedItems[0].SubItems[2].Text;
+				
+				string rowString = artist+";"+title+";"+album;
+				
+				string file = "";
+				if(CurrentList == List.SONGS)
+					file = SettingsSingleton.Instance.option["songsListPath"];
+				else if(CurrentList == List.WISHLIST)
+					file = SettingsSingleton.Instance.option["wishListPath"];
+					
+				
+				string content = File.ReadAllText(file);
+				content = content.Replace(rowString, "");
+				
+				File.WriteAllText(file, content);
+				
+				this.LoadList(file);
+			}
 		}
 	}
 }

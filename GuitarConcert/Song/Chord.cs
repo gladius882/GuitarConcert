@@ -40,7 +40,7 @@ namespace GuitarConcert
 		{
 			try {
 				XmlDocument doc = new XmlDocument();
-				doc.LoadXml(File.ReadAllText(PathBuilder.ChordDiagramPath(chordName)));
+				doc.LoadXml(File.ReadAllText(PathGenerator.ChordDiagramPath(chordName)));
 				
 				this.Name = doc.GetElementsByTagName("chord")[0].Attributes[0].Value;
 				

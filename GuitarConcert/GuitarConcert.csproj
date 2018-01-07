@@ -54,7 +54,7 @@
     <Compile Include="Helpers\GcFile.cs" />
     <Compile Include="Helpers\IniFile.cs" />
     <Compile Include="Helpers\Logger.cs" />
-    <Compile Include="Helpers\PathBuilder.cs" />
+    <Compile Include="Helpers\PathGenerator.cs" />
     <Compile Include="Helpers\SettingsSingleton.cs" />
     <Compile Include="MainForm.cs" />
     <Compile Include="MainForm.Designer.cs">

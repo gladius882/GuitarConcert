@@ -9,6 +9,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Media;
 
 namespace GuitarConcert
 {
@@ -29,7 +30,7 @@ namespace GuitarConcert
 			this.info = IniFile.ReadAllOptions(fileName);
 			
 			this.SongBook = new ChordsSongBook();
-			this.SongBook.Load(PathBuilder.SongChordsPath(this));
+			this.SongBook.Load(PathGenerator.SongChordsPath(this));
 			
 			this.Lyrics = new Lyrics(getString("songTitle"), getString("songArtist"));
 		}
@@ -67,9 +68,10 @@ namespace GuitarConcert
 			}
 		}
 		
-		public void PlayMidi()
+		public static void PlayMidi(string midiPath)
 		{
-			// TODO Play midi from file
+			SoundPlayer player = new SoundPlayer(midiPath);
+			player.Play();
 		}
 		
 		public void PlayMP3()

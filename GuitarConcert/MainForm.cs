@@ -28,9 +28,6 @@ namespace GuitarConcert
 			
 			View  = new SongsForm();
 			this.LoadView(View);
-			
-			
-			
 		}
 		
 		public void LoadView(Form view)
@@ -51,7 +48,6 @@ namespace GuitarConcert
 			settings.MdiParent = this;			
 			settings.Show();
 			settings.WindowState = FormWindowState.Maximized;
-			
 		}
 		
 		public void CloseAllMdiChilds()

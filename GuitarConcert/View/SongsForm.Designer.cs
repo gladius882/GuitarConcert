@@ -95,6 +95,7 @@ namespace GuitarConcert
 			this.toolStripDelete.Name = "toolStripDelete";
 			this.toolStripDelete.Size = new System.Drawing.Size(36, 36);
 			this.toolStripDelete.Text = "Usuń";
+			this.toolStripDelete.Click += new System.EventHandler(this.ToolStripDeleteClick);
 			// 
 			// toolStripEdit
 			// 
