@@ -86,6 +86,7 @@ namespace GuitarConcert
 			this.detailsList.Items.Add(String.Empty);
 			this.detailsList.Items.Add("Gatunek: " + currentSong.getString("genre"));
 			this.detailsList.Items.Add("Metrum: " + currentSong.getString("metrum"));
+			this.detailsList.Items.Add("Kapo: " + currentSong.getString("capo"));
 		}
 		
 		void ToolStripPlayClick(object sender, EventArgs e)

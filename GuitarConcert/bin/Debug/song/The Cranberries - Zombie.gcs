@@ -11,6 +11,7 @@ tags:
 key:E
 metrum:4/4
 bpm:120
+capo:0
 
 # play info
 autoScrollSpeed:4

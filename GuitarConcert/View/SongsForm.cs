@@ -13,11 +13,6 @@ using System.IO;
 using Sanford.Multimedia.Midi;
 namespace GuitarConcert
 {
-	public enum List
-	{
-		SONGS,
-		WISHLIST
-	}
 	/// <summary>
 	/// Description of SongsForm.
 	/// </summary>
@@ -123,10 +118,14 @@ namespace GuitarConcert
 				
 				File.WriteAllText(file, content);
 				
-				this.listViewSongs.Items.Remove(new ListViewItem(rowString));
-				
-				this.LoadList(file);
+				this.listViewSongs.Items.RemoveAt(this.listViewSongs.SelectedItems[0].Index);
 			}
 		}
+	}
+	
+	public enum List
+	{
+		SONGS,
+		WISHLIST
 	}
 }

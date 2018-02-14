@@ -63,7 +63,7 @@ namespace GuitarConcert
 			Graphics graphics = Graphics.FromImage(bmp);
 			Pen blackPen = new Pen(Color.Black);
 			
-			graphics.DrawString(this.Name, new Font(SettingsSingleton.Instance.option["fontName"], float.Parse(SettingsSingleton.Instance.option["fontSize"]), System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238))), Brushes.Black, 120, 0);
+			graphics.DrawString(this.Name, new Font(SettingsSingleton.Instance.option["fontName"], float.Parse(SettingsSingleton.Instance.option["fontSize"]), System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238))), Brushes.Black, 125, 0);
 			graphics.DrawRectangle(new Pen(Color.Black), 0, 30, 290, 125);
 			
 			for(int y=48; y<150; y+=18)
@@ -76,12 +76,12 @@ namespace GuitarConcert
 				graphics.DrawLine(new Pen(Color.DarkKhaki), x, 30, x, 155);
 			}
 			
-			graphics.FillEllipse(new SolidBrush(Color.Red), E4==0? -4:(E4-1)*72+36-5, 30+(18*1)-5, 10, 10);
-			graphics.FillEllipse(new SolidBrush(Color.Red), B3==0? -4:(B3-1)*72+36-5, 30+(18*2)-5, 10, 10);
-			graphics.FillEllipse(new SolidBrush(Color.Red), G3==0? -4:(G3-1)*72+36-5, 30+(18*3)-5, 10, 10);
-			graphics.FillEllipse(new SolidBrush(Color.Red), D3==0? -4:(D3-1)*72+36-5, 30+(18*4)-5, 10, 10);
-			graphics.FillEllipse(new SolidBrush(Color.Red), A2==0? -4:(A2-1)*72+36-5, 30+(18*5)-5, 10, 10);
-			graphics.FillEllipse(new SolidBrush(Color.Red), E2==0? -4:(E2-1)*72+36-5, 30+(18*6)-5, 10, 10);
+			graphics.FillEllipse(new SolidBrush(Color.Blue), E4==0? -4:(E4-1)*72+36-5, 30+(18*1)-5, 10, 10);
+			graphics.FillEllipse(new SolidBrush(Color.Blue), B3==0? -4:(B3-1)*72+36-5, 30+(18*2)-5, 10, 10);
+			graphics.FillEllipse(new SolidBrush(Color.Blue), G3==0? -4:(G3-1)*72+36-5, 30+(18*3)-5, 10, 10);
+			graphics.FillEllipse(new SolidBrush(Color.Blue), D3==0? -4:(D3-1)*72+36-5, 30+(18*4)-5, 10, 10);
+			graphics.FillEllipse(new SolidBrush(Color.Blue), A2==0? -4:(A2-1)*72+36-5, 30+(18*5)-5, 10, 10);
+			graphics.FillEllipse(new SolidBrush(Color.Blue), E2==0? -4:(E2-1)*72+36-5, 30+(18*6)-5, 10, 10);
 			
 			return bmp;
 		}
