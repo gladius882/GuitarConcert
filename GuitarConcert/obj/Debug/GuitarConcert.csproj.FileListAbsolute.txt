@@ -64,3 +64,6 @@ C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\bin\Debug\Sanford.Mu
 C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\bin\Debug\Sanford.Multimedia.Midi.pdb
 C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\bin\Debug\Sanford.Multimedia.Midi.xml
 C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\bin\Debug\GuitarConcert.exe.config
+C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\bin\Debug\AlphaTab.dll
+C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\bin\Debug\DotNetZip.dll
+C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\bin\Debug\DotNetZip.xml

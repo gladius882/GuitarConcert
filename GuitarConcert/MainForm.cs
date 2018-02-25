@@ -12,6 +12,11 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Xml;
 using System.IO;
+using Sanford.Multimedia.Midi;
+using AlphaTab.Model;
+using AlphaTab.Importer;
+using Track = AlphaTab.Model.Track;
+using AlphaTab.Rendering;
 
 namespace GuitarConcert
 {

@@ -7,65 +7,64 @@
  */
 using System;
 using System.IO;
-using System.IO.Compression;
+using Ionic.Zip;
 
 namespace GuitarConcert
 {
 	/// <summary>
 	/// Description of GcFile.
 	/// </summary>
-	public class GcFile
+	public class GcFile : IDisposable
 	{
-		// TODO add support to multiple files in archive
-		public GcFile()
-		{
+		private ZipFile zip;
+		
+		public GcFile(string fileName)
+		{	
+			Open(fileName);
 		}
 		
-		public static void Compress(DirectoryInfo directorySelected)
-        {
-			//string directoryPath = @"C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\bin\Debug";
-            foreach (FileInfo fileToCompress in directorySelected.GetFiles())
-            {
-                using (FileStream originalFileStream = fileToCompress.OpenRead())
-                {
-                    if ((File.GetAttributes(fileToCompress.FullName) & 
-                       FileAttributes.Hidden) != FileAttributes.Hidden & fileToCompress.Extension != ".gz")
-                    {
-                        using (FileStream compressedFileStream = File.Create(directorySelected.FullName + ".gz"))
-                        {
-                            using (GZipStream compressionStream = new GZipStream(compressedFileStream, 
-                               CompressionMode.Compress))
-                            {
-                                originalFileStream.CopyTo(compressionStream);
-
-                            }
-                        }
-//                        FileInfo info = new FileInfo(directoryPath + "\\" + fileToCompress.Name + ".gz");
-//                        Console.WriteLine("Compressed {0} from {1} to {2} bytes.",
-//                        fileToCompress.Name, fileToCompress.Length.ToString(), info.Length.ToString());
-                    }
-
-                }
-            }
-        }
+		public GcFile()
+		{
+			zip = new ZipFile();
+		}
 		
-		public static void Decompress(FileInfo fileToDecompress)
-        {
-			// FIXME InvalidDataException
-            using (FileStream originalFileStream = fileToDecompress.OpenRead())
-            {
-                string currentFileName = fileToDecompress.FullName;
-                string newFileName = currentFileName.Remove(currentFileName.Length - fileToDecompress.Extension.Length);
-
-                using (FileStream decompressedFileStream = File.Create(newFileName))
-                {
-                    using (GZipStream decompressionStream = new GZipStream(originalFileStream, CompressionMode.Decompress, true))
-                    {
-                        decompressionStream.CopyTo(decompressedFileStream);
-                        Console.WriteLine("Decompressed: {0}", fileToDecompress.Name);
-                    }
-                }
-            }
-        }
+		public void Open(string fileName)
+		{
+			if(File.Exists(fileName))
+				this.zip = new ZipFile(fileName);
+			else
+				throw new FileNotFoundException(fileName);
+		}
+		
+		public void Extract(string path)
+		{
+			if(Directory.Exists(path))
+				this.zip.ExtractAll(path);
+			else 
+				throw new DirectoryNotFoundException(path);
+		}
+		
+		public static void Create(string[] files, string output)
+		{
+			using(ZipFile gc = new ZipFile())
+			{
+				foreach(string file in files)
+				{
+					gc.AddFile(file, ".");
+				}
+				
+				if(output.EndsWith(".gc") == false)
+				{
+					output+=".gc";
+				}
+				
+				gc.Save(output);
+			}
+		}
+		
+		public void Dispose()
+		{
+			this.zip.Dispose();
+		}
 	}
 }

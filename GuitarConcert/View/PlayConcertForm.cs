@@ -9,6 +9,7 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 using System.IO;
+using Sanford.Multimedia.Midi;
 
 namespace GuitarConcert
 {
@@ -93,6 +94,7 @@ namespace GuitarConcert
 		{
 			this.timer.Interval = 60000 / this.currentSong.getInt("bpm");
 			timer.Start();
+//			sequencer1.Start();
 		}
 		
 		private void Delay(object sender, EventArgs e)

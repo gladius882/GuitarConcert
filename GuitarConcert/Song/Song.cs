@@ -67,16 +67,5 @@ namespace GuitarConcert
 				return -1;
 			}
 		}
-		
-		public static void PlayMidi(string midiPath)
-		{
-			SoundPlayer player = new SoundPlayer(midiPath);
-			player.Play();
-		}
-		
-		public void PlayMP3()
-		{
-			// TODO Play mp3 from file
-		}
 	}
 }
