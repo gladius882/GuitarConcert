@@ -1,21 +1,57 @@
 ----------------------------------------------------------------
-2018-02-25 13:18:17:828
+2018-02-25 16:09:32:817
+Nie można odnaleźć pliku 'C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\bin\Debug\chords\G6.chrd'.
+HResult: -2147024894
+   w System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   w System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   w System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
+   w System.IO.File.ReadAllText(String path)
+   w GuitarConcert.Chord.Load(String fileName) w c:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\Song\Chord.cs:wiersz 43
+
+----------------------------------------------------------------
+2018-02-25 16:09:46:161
+Nie można odnaleźć pliku 'C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\bin\Debug\chords\G6.chrd'.
+HResult: -2147024894
+   w System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   w System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   w System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
+   w System.IO.File.ReadAllText(String path)
+   w GuitarConcert.Chord.Load(String fileName) w c:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\Song\Chord.cs:wiersz 43
+
+----------------------------------------------------------------
+2018-02-25 16:14:02:35
+Nie można odnaleźć części ścieżki „C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\bin\Debug\chords\D\F#.chrd”.
+HResult: -2147024893
+   w System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   w System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   w System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
+   w System.IO.File.ReadAllText(String path)
+   w GuitarConcert.Chord.Load(String fileName) w c:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\Song\Chord.cs:wiersz 43
+
+----------------------------------------------------------------
+2018-02-25 17:46:13:79
 Dany klucz nie był obecny w słowniku.
 HResult: -2146232969
    w System.ThrowHelper.ThrowKeyNotFoundException()
    w System.Collections.Generic.Dictionary`2.get_Item(TKey key)
-   w GuitarConcert.Song.getString(String key) w c:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\Song\Song.cs:wiersz 41
+   w GuitarConcert.Song.getString(String key) w c:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\Song\Song.cs:wiersz 47
 
 ----------------------------------------------------------------
-2018-02-25 13:18:17:874
+2018-02-25 17:46:14:126
 Dany klucz nie był obecny w słowniku.
 HResult: -2146232969
    w System.ThrowHelper.ThrowKeyNotFoundException()
    w System.Collections.Generic.Dictionary`2.get_Item(TKey key)
-   w GuitarConcert.Song.getString(String key) w c:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\Song\Song.cs:wiersz 41
+   w GuitarConcert.Song.getString(String key) w c:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\Song\Song.cs:wiersz 47
 
 ----------------------------------------------------------------
-2018-02-25 13:18:17:898
+2018-02-25 17:46:14:142
 Nie można odnaleźć pliku 'C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\bin\Debug\song\None - None.gcc'.
 HResult: -2147024894
    w System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
@@ -27,46 +63,46 @@ HResult: -2147024894
    w GuitarConcert.ChordsSongBook.Load(String fileName) w c:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\Song\ChordsSongBook.cs:wiersz 29
 
 ----------------------------------------------------------------
-2018-02-25 13:18:17:910
+2018-02-25 17:46:14:157
 Dany klucz nie był obecny w słowniku.
 HResult: -2146232969
    w System.ThrowHelper.ThrowKeyNotFoundException()
    w System.Collections.Generic.Dictionary`2.get_Item(TKey key)
-   w GuitarConcert.Song.getString(String key) w c:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\Song\Song.cs:wiersz 41
+   w GuitarConcert.Song.getString(String key) w c:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\Song\Song.cs:wiersz 47
 
 ----------------------------------------------------------------
-2018-02-25 13:18:17:920
+2018-02-25 17:46:14:173
 Dany klucz nie był obecny w słowniku.
 HResult: -2146232969
    w System.ThrowHelper.ThrowKeyNotFoundException()
    w System.Collections.Generic.Dictionary`2.get_Item(TKey key)
-   w GuitarConcert.Song.getString(String key) w c:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\Song\Song.cs:wiersz 41
+   w GuitarConcert.Song.getString(String key) w c:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\Song\Song.cs:wiersz 47
 
 ----------------------------------------------------------------
-2018-02-25 13:18:17:934
-Nie można odnaleźć pliku 'C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\bin\Debug\song\None - None.gcl'.
-HResult: -2147024894
-   w System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   w System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   w System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   w System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
-   w System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
-   w System.IO.File.ReadAllText(String path)
-   w GuitarConcert.Lyrics.Load(String fileName) w c:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\Song\Lyrics.cs:wiersz 36
-
-----------------------------------------------------------------
-2018-02-25 13:18:18:156
+2018-02-25 17:46:14:454
 Dany klucz nie był obecny w słowniku.
 HResult: -2146232969
    w System.ThrowHelper.ThrowKeyNotFoundException()
    w System.Collections.Generic.Dictionary`2.get_Item(TKey key)
-   w GuitarConcert.Song.getString(String key) w c:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\Song\Song.cs:wiersz 41
+   w GuitarConcert.Song.getString(String key) w c:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\Song\Song.cs:wiersz 47
 
 ----------------------------------------------------------------
-2018-02-25 13:18:18:167
+2018-02-25 17:46:14:470
 Dany klucz nie był obecny w słowniku.
 HResult: -2146232969
    w System.ThrowHelper.ThrowKeyNotFoundException()
    w System.Collections.Generic.Dictionary`2.get_Item(TKey key)
-   w GuitarConcert.Song.getString(String key) w c:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\Song\Song.cs:wiersz 41
+   w GuitarConcert.Song.getString(String key) w c:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\Song\Song.cs:wiersz 47
+
+----------------------------------------------------------------
+2018-02-25 17:53:35:956
+Odwołanie do obiektu nie zostało ustawione na wystąpienie obiektu.
+HResult: -2147467261
+   w GuitarConcert.Song.getString(String key) w c:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\Song\Song.cs:wiersz 52
+
+----------------------------------------------------------------
+2018-02-25 17:53:35:987
+Odwołanie do obiektu nie zostało ustawione na wystąpienie obiektu.
+HResult: -2147467261
+   w GuitarConcert.Song.getString(String key) w c:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\Song\Song.cs:wiersz 52
 

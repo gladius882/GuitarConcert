@@ -67,3 +67,4 @@ C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\bin\Debug\GuitarConc
 C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\bin\Debug\AlphaTab.dll
 C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\bin\Debug\DotNetZip.dll
 C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\bin\Debug\DotNetZip.xml
+C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\bin\Debug\RichTextBoxLinks.dll

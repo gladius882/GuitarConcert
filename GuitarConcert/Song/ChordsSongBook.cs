@@ -32,7 +32,7 @@ namespace GuitarConcert
 				
 				foreach(string chrd in chords)
 				{
-					ChordsList.Add(chrd);
+					ChordsList.Add(chrd.Replace(' ', '/'));
 				}
 			}
 			catch(Exception exception) {

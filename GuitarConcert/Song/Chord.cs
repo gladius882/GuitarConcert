@@ -40,7 +40,7 @@ namespace GuitarConcert
 		{
 			try {
 				XmlDocument doc = new XmlDocument();
-				doc.LoadXml(File.ReadAllText(PathGenerator.ChordDiagramPath(fileName)));
+				doc.LoadXml(File.ReadAllText(fileName));
 				
 				this.Name = doc.GetElementsByTagName("chord")[0].Attributes[0].Value;
 				
@@ -53,7 +53,6 @@ namespace GuitarConcert
 			}
 			catch(Exception exception) {
 				RestoreDefault();
-				Logger.ToFile(exception);
 			}
 		}
 		

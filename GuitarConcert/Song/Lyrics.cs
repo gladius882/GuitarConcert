@@ -24,22 +24,20 @@ namespace GuitarConcert
 			this.NoLyricsString = "[BRAK TEKSTU]";
 		}
 		
-		public Lyrics(string title, string artist)
+		public Lyrics(string fileName)
 		{
 			this.NoLyricsString = "[BRAK TEKSTU]";
-			this.Load(PathGenerator.SongLyricsPath(artist, title));
+			this.Load(fileName);
 		}
 		
 		public void Load(string fileName)
 		{
 			try {
-				string content = File.ReadAllText(fileName);
-				
+				string content = File.ReadAllText(fileName);	
 				this.Text = content;
 			}
 			catch(Exception exception) {
 				this.Text = this.NoLyricsString;
-				Logger.ToFile(exception);
 			}
 		}
 	}

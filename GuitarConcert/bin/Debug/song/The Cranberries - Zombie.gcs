@@ -16,6 +16,7 @@ capo:0
 # play info
 autoScrollSpeed:4
 autoScrollDelay:76
+#autoScrollDelay:0
 audioFile:C:\Users\gladius882\Music\Cranberries - Zombie.mp3
 audioLink:
 videoFile:

@@ -84,6 +84,7 @@ namespace GuitarConcert
 			this.Name = "MainForm";
 			this.Text = "GuitarConcert";
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainFormFormClosed);
 			this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MainFormKeyPress);
 			this.toolStrip1.ResumeLayout(false);
 			this.toolStrip1.PerformLayout();

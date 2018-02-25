@@ -37,6 +37,8 @@ namespace GuitarConcert
 			this.splitContainer2.SplitterDistance = this.ClientSize.Width -this.splitContainer1.SplitterDistance-tmp;
 			
 			timer.Tick += this.Delay;
+			
+			
 		}
 		
 		public void LoadSong(Song sng)
@@ -50,12 +52,19 @@ namespace GuitarConcert
 			this.lyricsBox.Text = sng.Lyrics.Text;
 			
 			
+			vScrollBar1.Minimum = 1;
+			vScrollBar1.Maximum = this.lyricsBox.Lines.Length;
+			
+			
 			this.chordsListBox.Items.Clear();
 			foreach(string chrd in sng.SongBook.ChordsList)
 			{
 				this.chordsListBox.Items.Add(chrd);
 			}
 			
+			string firstChord = this.chordsListBox.Items[0].ToString().Replace('/', ' ');
+			Chord currChrd = new Chord(PathGenerator.ChordDiagramPath(firstChord));
+			chordDiagramPicture.Image = currChrd.CreateBitmap();
 			
 			// TODO Move to Tablature class
 			try {
@@ -94,17 +103,20 @@ namespace GuitarConcert
 		{
 			this.timer.Interval = 60000 / this.currentSong.getInt("bpm");
 			timer.Start();
-//			sequencer1.Start();
 		}
 		
 		private void Delay(object sender, EventArgs e)
 		{	
 			if(tick >= currentSong.getInt("autoScrollDelay"))
 			{
-				int linesPerPage = lyricsBox.Height / (int.Parse(lyricsBox.Font.Size.ToString()) + lyricsBox.Margin.Vertical ) - 1;
-				
-				int lineToScroll = linesPerPage + (tick - currentSong.getInt("autoScrollDelay") ) / currentSong.getInt("autoScrollSpeed");
-				ScrollLyricsToLine(lineToScroll);
+				if(this.tick%currentSong.getInt("autoScrollSpeed") == 0)
+				{
+//					int linesPerPage = lyricsBox.Height / (int.Parse(lyricsBox.Font.Size.ToString()) + lyricsBox.Margin.Vertical ) - 1;
+//				
+//					int lineToScroll = linesPerPage + (tick - currentSong.getInt("autoScrollDelay") ) / currentSong.getInt("autoScrollSpeed");
+//					ScrollLyricsToLine(lineToScroll);
+					vScrollBar1.Value++;
+				}
 			}
 			
 			if(tick < chordsListBox.Items.Count)
@@ -117,7 +129,7 @@ namespace GuitarConcert
 				
 				if(selectedValue != String.Empty)
 				{
-					Chord chrd = new Chord(selectedValue);
+					Chord chrd = new Chord(PathGenerator.ChordDiagramPath(selectedValue.Replace('/', ' ')));
 					this.currentChord = chrd;
 					this.chordDiagramPicture.Image = chrd.CreateBitmap();
 				}
@@ -156,16 +168,18 @@ namespace GuitarConcert
 		
 		void ScrollLyricsToLine(int line)
 		{
-			if(line > lyricsBox.Lines.Length)
+			if(line >= lyricsBox.Lines.Length)
 				return;
 			
-			int offset = 0;
-			for(int i=0; i<line-1; i++)
-			{
-				offset += lyricsBox.Lines[i].Length+2;
-			}
-			
-			lyricsBox.SelectionStart = offset;
+//			int offset = 0;
+//			for(int i=0; i<line-1; i++)
+//			{
+//				offset += lyricsBox.Lines[i].Length;
+//			}
+//			
+//			lyricsBox.SelectionStart = offset;
+			int index = this.lyricsBox.GetFirstCharIndexFromLine(line-1);
+			this.lyricsBox.SelectionStart = index;
 			lyricsBox.ScrollToCaret();
 		}
 		
@@ -174,5 +188,16 @@ namespace GuitarConcert
 			MainForm parent = (MainForm)this.MdiParent;
 			parent.LoadView(new SongsForm());
 		}
+		
+		void VScrollBar1Scroll(object sender, ScrollEventArgs e)
+		{
+			ScrollLyricsToLine(e.NewValue);
+		}
+		
+		void VScrollBar1ValueChanged(object sender, EventArgs e)
+		{
+			ScrollLyricsToLine(vScrollBar1.Value);
+		}
+		
 	}
 }

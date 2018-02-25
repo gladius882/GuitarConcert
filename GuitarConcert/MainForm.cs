@@ -66,5 +66,14 @@ namespace GuitarConcert
 		{
 			// TODO Fullscreen switch when Ctrl + F has been pressed
 		}
+		
+		void MainFormFormClosed(object sender, FormClosedEventArgs e)
+		{
+			// Clear cache
+			foreach(FileInfo file in new DirectoryInfo("cache/song").GetFiles())
+			{
+				file.Delete();
+			}
+		}
 	}
 }

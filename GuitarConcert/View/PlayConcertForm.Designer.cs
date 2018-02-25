@@ -17,7 +17,6 @@ namespace GuitarConcert
 		private System.Windows.Forms.SplitContainer splitContainer2;
 		private System.Windows.Forms.SplitContainer splitContainer3;
 		private System.Windows.Forms.SplitContainer splitContainer6;
-		private System.Windows.Forms.TextBox lyricsBox;
 		private System.Windows.Forms.SplitContainer splitContainer4;
 		private System.Windows.Forms.SplitContainer splitContainer5;
 		private System.Windows.Forms.ToolStrip toolStrip1;
@@ -33,6 +32,8 @@ namespace GuitarConcert
 		private System.Windows.Forms.ToolStripButton toolStripPause;
 		private System.Windows.Forms.ToolStrip toolStrip2;
 		private System.Windows.Forms.ToolStripButton toolStripBack;
+		private System.Windows.Forms.VScrollBar vScrollBar1;
+		private RichTextBoxLinks.RichTextBoxEx lyricsBox;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -69,7 +70,8 @@ namespace GuitarConcert
 			this.toolStripStop = new System.Windows.Forms.ToolStripButton();
 			this.splitContainer2 = new System.Windows.Forms.SplitContainer();
 			this.splitContainer6 = new System.Windows.Forms.SplitContainer();
-			this.lyricsBox = new System.Windows.Forms.TextBox();
+			this.lyricsBox = new RichTextBoxLinks.RichTextBoxEx();
+			this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
 			this.tabBox = new System.Windows.Forms.TextBox();
 			this.splitContainer4 = new System.Windows.Forms.SplitContainer();
 			this.chordDiagramPicture = new System.Windows.Forms.PictureBox();
@@ -224,7 +226,6 @@ namespace GuitarConcert
 			this.toolStripPause.Name = "toolStripPause";
 			this.toolStripPause.Size = new System.Drawing.Size(36, 36);
 			this.toolStripPause.Text = "Pauza";
-			this.toolStripPause.Click += new System.EventHandler(this.ToolStripPauseClick);
 			// 
 			// toolStripStop
 			// 
@@ -263,6 +264,7 @@ namespace GuitarConcert
 			// splitContainer6.Panel1
 			// 
 			this.splitContainer6.Panel1.Controls.Add(this.lyricsBox);
+			this.splitContainer6.Panel1.Controls.Add(this.vScrollBar1);
 			// 
 			// splitContainer6.Panel2
 			// 
@@ -273,18 +275,25 @@ namespace GuitarConcert
 			// 
 			// lyricsBox
 			// 
-			this.lyricsBox.Cursor = System.Windows.Forms.Cursors.Arrow;
+			this.lyricsBox.DetectUrls = true;
 			this.lyricsBox.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.lyricsBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.lyricsBox.Location = new System.Drawing.Point(0, 0);
-			this.lyricsBox.Multiline = true;
 			this.lyricsBox.Name = "lyricsBox";
 			this.lyricsBox.ReadOnly = true;
-			this.lyricsBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-			this.lyricsBox.Size = new System.Drawing.Size(338, 388);
-			this.lyricsBox.TabIndex = 0;
-			this.lyricsBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			this.lyricsBox.WordWrap = false;
+			this.lyricsBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+			this.lyricsBox.Size = new System.Drawing.Size(321, 388);
+			this.lyricsBox.TabIndex = 2;
+			this.lyricsBox.Text = "ASDASADVASCA";
+			// 
+			// vScrollBar1
+			// 
+			this.vScrollBar1.Dock = System.Windows.Forms.DockStyle.Right;
+			this.vScrollBar1.Location = new System.Drawing.Point(321, 0);
+			this.vScrollBar1.Name = "vScrollBar1";
+			this.vScrollBar1.Size = new System.Drawing.Size(17, 388);
+			this.vScrollBar1.TabIndex = 1;
+			this.vScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.VScrollBar1Scroll);
+			this.vScrollBar1.ValueChanged += new System.EventHandler(this.VScrollBar1ValueChanged);
 			// 
 			// tabBox
 			// 
@@ -393,7 +402,6 @@ namespace GuitarConcert
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
 			this.splitContainer2.ResumeLayout(false);
 			this.splitContainer6.Panel1.ResumeLayout(false);
-			this.splitContainer6.Panel1.PerformLayout();
 			this.splitContainer6.Panel2.ResumeLayout(false);
 			this.splitContainer6.Panel2.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();

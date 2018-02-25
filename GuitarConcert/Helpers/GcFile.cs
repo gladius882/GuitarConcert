@@ -44,7 +44,7 @@ namespace GuitarConcert
 				throw new DirectoryNotFoundException(path);
 		}
 		
-		public static void Create(string[] files, string output)
+		public static void Create(string[] files, string output, bool overrideFile = true)
 		{
 			using(ZipFile gc = new ZipFile())
 			{
@@ -57,6 +57,9 @@ namespace GuitarConcert
 				{
 					output+=".gc";
 				}
+				
+				if(File.Exists(output) && overrideFile == true)
+					File.Delete(output);
 				
 				gc.Save(output);
 			}

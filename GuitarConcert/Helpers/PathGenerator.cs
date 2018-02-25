@@ -28,6 +28,16 @@ namespace GuitarConcert
 			return result;
 		}
 		
+		public static string SongPath(string artist, string title)
+		{
+			string result = String.Format("{0}/{1} - {2}.{3}",
+					SettingsSingleton.Instance.option["songDirectory"],
+					artist, title,
+					SettingsSingleton.Instance.option["songExtension"]);
+			
+			return result;
+		}
+		
 		public static string SongLyricsPath(string artist, string title)
 		{
 			string result = String.Format("{0}/{1} - {2}.{3}",
