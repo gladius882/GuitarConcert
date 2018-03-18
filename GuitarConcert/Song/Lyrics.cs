@@ -36,7 +36,7 @@ namespace GuitarConcert
 				string content = File.ReadAllText(fileName);	
 				this.Text = content;
 			}
-			catch(Exception exception) {
+			catch {
 				this.Text = this.NoLyricsString;
 			}
 		}

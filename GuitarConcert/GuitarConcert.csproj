@@ -38,6 +38,16 @@
     <Reference Include="DotNetZip">
       <HintPath>..\packages\DotNetZip.1.10.1\lib\net20\DotNetZip.dll</HintPath>
     </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
     <Reference Include="RichTextBoxLinks">
       <HintPath>..\..\..\RichTextBoxLinks\bin\Release\RichTextBoxLinks.dll</HintPath>
     </Reference>
@@ -65,7 +75,9 @@
     <Compile Include="Helpers\Logger.cs" />
     <Compile Include="Helpers\PathGenerator.cs" />
     <Compile Include="Helpers\SettingsSingleton.cs" />
-    <Compile Include="MainForm.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
@@ -76,7 +88,16 @@
     <Compile Include="Song\Song.cs" />
     <Compile Include="Song\Lyrics.cs" />
     <Compile Include="Song\Tablature.cs" />
-    <Compile Include="View\PlayConcertForm.cs" />
+    <Compile Include="Song\TextTablature.cs" />
+    <Compile Include="View\GuideForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\GuideForm.Designer.cs">
+      <DependentUpon>GuideForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PlayConcertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="View\PlayConcertForm.Designer.cs">
       <DependentUpon>PlayConcertForm.cs</DependentUpon>
     </Compile>
@@ -84,11 +105,15 @@
       <DependentUpon>PlayConcertForm.resx</DependentUpon>
       <AutoGen>True</AutoGen>
     </Compile>
-    <Compile Include="View\SettingsForm.cs" />
+    <Compile Include="View\SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="View\SettingsForm.Designer.cs">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\SongsForm.cs" />
+    <Compile Include="View\SongsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="View\SongsForm.Designer.cs">
       <DependentUpon>SongsForm.cs</DependentUpon>
     </Compile>
@@ -96,6 +121,9 @@
   <ItemGroup>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\GuideForm.resx">
+      <DependentUpon>GuideForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\PlayConcertForm.resx">
       <DependentUpon>PlayConcertForm.cs</DependentUpon>
@@ -109,11 +137,7 @@
       <DependentUpon>SongsForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Helpers" />
-    <Folder Include="Song" />
-    <Folder Include="View" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />

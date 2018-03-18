@@ -19,15 +19,33 @@ namespace GuitarConcert
 	/// </summary>
 	public class Song
 	{
-		private string cachePath = "cache/";
 		private GcFile gc;
-		private Dictionary<string, string> info;
 		private IniFile ini;
+		private Tablature Tablature;
 		
 		public readonly string errorString;
 		public ChordsSongBook SongBook;
 		public Lyrics Lyrics;
-		public Tablature Tablature;
+		
+		#region Properties
+		
+		public object GpTablature
+		{
+			get
+			{
+				return Tablature;
+			}
+		}
+		
+		public object TextTablature
+		{
+			get
+			{
+				return Tablature;
+			}
+		}
+		
+		#endregion
 		
 		public Song(string artist, string title)
 		{
@@ -39,10 +57,9 @@ namespace GuitarConcert
 				file.Delete();
 			}
 			
-			gc = new GcFile(PathGenerator.SongPath(artist, title));
+			gc = new GcFile("song/"+artist+" - "+title+".gc");
 			gc.Extract("cache/song");
 			
-//			this.info = IniFile.ReadAllOptions("cache/song/"+artist+" - "+title+".gcs");
 			this.ini = new IniFile("cache/song/"+artist+" - "+title+".gcs");
 			
 			this.SongBook = new ChordsSongBook();
@@ -56,8 +73,8 @@ namespace GuitarConcert
 			try {
 				return ini.Option[key];
 			}
-			catch(Exception exception) {
-				return errorString;
+			catch {
+				return this.errorString;
 			}
 		}
 		

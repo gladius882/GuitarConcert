@@ -283,7 +283,7 @@ namespace GuitarConcert
 			this.lyricsBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
 			this.lyricsBox.Size = new System.Drawing.Size(321, 388);
 			this.lyricsBox.TabIndex = 2;
-			this.lyricsBox.Text = "ASDASADVASCA";
+			this.lyricsBox.Text = "";
 			// 
 			// vScrollBar1
 			// 

@@ -6,6 +6,8 @@
  * 
  */
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Drawing;
 using System.Windows.Forms;
 using System.IO;
@@ -37,8 +39,6 @@ namespace GuitarConcert
 			this.splitContainer2.SplitterDistance = this.ClientSize.Width -this.splitContainer1.SplitterDistance-tmp;
 			
 			timer.Tick += this.Delay;
-			
-			
 		}
 		
 		public void LoadSong(Song sng)
@@ -49,18 +49,37 @@ namespace GuitarConcert
 			this.LoadDetails();
 			
 			this.lyricsBox.Clear();
-			this.lyricsBox.Text = sng.Lyrics.Text;
-			
-			
+			this.lyricsBox.Text = sng.Lyrics.Text;     		
 			vScrollBar1.Minimum = 1;
 			vScrollBar1.Maximum = this.lyricsBox.Lines.Length;
-			
+					
 			
 			this.chordsListBox.Items.Clear();
 			foreach(string chrd in sng.SongBook.ChordsList)
 			{
 				this.chordsListBox.Items.Add(chrd);
 			}
+			
+			List<string> allChords = sng.SongBook.ChordsList;
+			var uniqueChords= allChords.Distinct();
+			
+			foreach(string c in uniqueChords)
+			{
+				if(c.Trim() == String.Empty)
+					continue;
+				
+				int len = this.lyricsBox.TextLength;
+      			int index = 0;
+				int lastIndex = this.lyricsBox.Text.LastIndexOf(c);
+
+	      		while ( index < lastIndex )
+	      		{
+	        		this.lyricsBox.Find(c, index, len, RichTextBoxFinds.None);
+	        		this.lyricsBox.SelectionBackColor = Color.Yellow;
+	        		index = this.lyricsBox.Text.IndexOf(c, index) + 1;
+	      		}
+			}
+			
 			
 			string firstChord = this.chordsListBox.Items[0].ToString().Replace('/', ' ');
 			Chord currChrd = new Chord(PathGenerator.ChordDiagramPath(firstChord));
