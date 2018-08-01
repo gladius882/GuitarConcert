@@ -142,3 +142,39 @@ HResult: -2147024894
    w System.IO.File.ReadAllText(String path)
    w GuitarConcert.PlayConcertForm.LoadSong(Song sng) w c:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\View\PlayConcertForm.cs:wiersz 90
 
+----------------------------------------------------------------
+2018-03-26 07:03:58:836
+Nie można odnaleźć pliku 'C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\bin\Debug\song\The Cranberries - Zombie.gct'.
+HResult: -2147024894
+   w System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   w System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   w System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
+   w System.IO.File.ReadAllText(String path)
+   w GuitarConcert.PlayConcertForm.LoadSong(Song sng) w c:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\View\PlayConcertForm.cs:wiersz 90
+
+----------------------------------------------------------------
+2018-07-15 17:25:55:866
+Nie można odnaleźć pliku 'D:\Backup\Git\GuitarConcert\GuitarConcert\bin\Debug\song\The Cranberries - Zombie.gct'.
+HResult: -2147024894
+   w System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   w System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   w System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
+   w System.IO.File.ReadAllText(String path)
+   w GuitarConcert.PlayConcertForm.LoadSong(Song sng) w c:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\View\PlayConcertForm.cs:wiersz 90
+
+----------------------------------------------------------------
+2018-07-15 18:34:26:94
+Nie można odnaleźć pliku 'C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\bin\Debug\song\The Cranberries - Zombie.gct'.
+HResult: -2147024894
+   w System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   w System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   w System.IO.File.InternalReadAllText(String path, Encoding encoding, Boolean checkHost)
+   w System.IO.File.ReadAllText(String path)
+   w GuitarConcert.PlayConcertForm.LoadSong(Song sng) w d:\Backup\Git\GuitarConcert\GuitarConcert\View\PlayConcertForm.cs:wiersz 90
+

@@ -1,0 +1,21 @@
+# basic song info
+songTitle:Zombie
+songArtist:The Cranberries
+songAlbum:No need to argue
+releaseYear:2000
+genre:Rock
+
+# usefull info
+difficulty:Easy
+tags:
+tonation:E
+metrum:4/4
+bmp:120
+
+# play info
+autoScrollSpeed:1
+autoScrollDelay:90
+audioFile:C:\Users\gladius882\Music\Cranberries - Zombie.mp3
+audioLink:
+videoFile:
+videoLink:
