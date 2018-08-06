@@ -1,0 +1,32 @@
+<lfm status="ok">
+  <artist>
+    <name>Led Zeppelin</name>
+    <mbid>
+    </mbid>
+    <url>
+    </url>
+    <image size="small">
+    </image>
+    <image size="medium">
+    </image>
+    <image size="large">
+    </image>
+    <image size="extralarge">
+    </image>
+    <streamable>0</streamable>
+    <ontour>0</ontour>
+    <stats>
+      <listeners>0</listeners>
+      <playcount>0</playcount>
+    </stats>
+    <similar />
+    <tags />
+    <bio>
+      <published>2018-08-05 19:57:34</published>
+      <summary>
+      </summary>
+      <content>
+      </content>
+    </bio>
+  </artist>
+</lfm>

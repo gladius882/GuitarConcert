@@ -121,6 +121,12 @@ namespace GuitarConcert
 				this.listViewSongs.Items.RemoveAt(this.listViewSongs.SelectedItems[0].Index);
 			}
 		}
+		
+		void ToolStripAddClick(object sender, EventArgs e)
+		{
+			MainForm parent = (MainForm)this.MdiParent;
+			parent.LoadView(new NewSongForm());
+		}
 	}
 	
 	public enum List

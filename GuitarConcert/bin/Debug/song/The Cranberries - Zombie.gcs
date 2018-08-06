@@ -5,17 +5,14 @@ songAlbum:No need to argue
 releaseYear:2000
 genre:Rock
 
-# usefull info
-difficulty:Easy
+# useful info
 tags:
-tonation:E
+key:E
 metrum:4/4
-bmp:120
+bpm:72
+capo:0
 
 # play info
-autoScrollSpeed:1
-autoScrollDelay:90
-audioFile:C:\Users\gladius882\Music\Cranberries - Zombie.mp3
-audioLink:
-videoFile:
-videoLink:
+autoScrollSpeed:4
+autoScrollDelay:76
+#autoScrollDelay:0

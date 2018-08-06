@@ -52,7 +52,7 @@ namespace GuitarConcert
 		{
 			string result = String.Format("{0}/{1} - {2}.{3}",
 					SettingsSingleton.Instance.option["songDirectory"],
-					sng.getString("songArtist"), sng.getString("songTitle"),
+					sng.ArtistName, sng.Name,
 					SettingsSingleton.Instance.option["lyricsExtension"]);
 			
 			return result;
@@ -72,7 +72,7 @@ namespace GuitarConcert
 		{
 			string result = String.Format("{0}/{1} - {2}.{3}",
 					SettingsSingleton.Instance.option["songDirectory"],
-					sng.getString("songArtist"), sng.getString("songTitle"),
+					sng.ArtistName, sng.Name,
 					"gcc");
 			
 			return result;

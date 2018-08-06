@@ -64,15 +64,14 @@ namespace GuitarConcert
 			// 
 			// toolStrip1
 			// 
-			this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
 			this.toolStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
 			this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-			this.toolStripAdd,
-			this.toolStripDelete,
-			this.toolStripEdit,
-			this.toolStripSeparator1,
-			this.toolStripSongs,
-			this.toolStripWishlist});
+									this.toolStripAdd,
+									this.toolStripDelete,
+									this.toolStripEdit,
+									this.toolStripSeparator1,
+									this.toolStripSongs,
+									this.toolStripWishlist});
 			this.toolStrip1.Location = new System.Drawing.Point(0, 0);
 			this.toolStrip1.Name = "toolStrip1";
 			this.toolStrip1.Size = new System.Drawing.Size(914, 39);
@@ -87,6 +86,7 @@ namespace GuitarConcert
 			this.toolStripAdd.Name = "toolStripAdd";
 			this.toolStripAdd.Size = new System.Drawing.Size(36, 36);
 			this.toolStripAdd.Text = "Dodaj";
+			this.toolStripAdd.Click += new System.EventHandler(this.ToolStripAddClick);
 			// 
 			// toolStripDelete
 			// 
@@ -137,11 +137,11 @@ namespace GuitarConcert
 			this.listViewSongs.BackColor = System.Drawing.Color.Black;
 			this.listViewSongs.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.listViewSongs.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-			this.songArtist,
-			this.songTitle,
-			this.songAlbum,
-			this.songChords,
-			this.songTab});
+									this.songArtist,
+									this.songTitle,
+									this.songAlbum,
+									this.songChords,
+									this.songTab});
 			this.listViewSongs.ContextMenuStrip = this.songContextMenu;
 			this.listViewSongs.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.listViewSongs.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -182,9 +182,9 @@ namespace GuitarConcert
 			// songContextMenu
 			// 
 			this.songContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-			this.contextMenuItemAdd,
-			this.contextMenuItemDelete,
-			this.contextMenuItemEdit});
+									this.contextMenuItemAdd,
+									this.contextMenuItemDelete,
+									this.contextMenuItemEdit});
 			this.songContextMenu.Name = "contextMenuStrip1";
 			this.songContextMenu.Size = new System.Drawing.Size(108, 70);
 			// 
@@ -210,7 +210,7 @@ namespace GuitarConcert
 			// statusStrip1
 			// 
 			this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-			this.toolStripStatusLabel});
+									this.toolStripStatusLabel});
 			this.statusStrip1.Location = new System.Drawing.Point(0, 239);
 			this.statusStrip1.Name = "statusStrip1";
 			this.statusStrip1.Size = new System.Drawing.Size(914, 22);
@@ -239,7 +239,6 @@ namespace GuitarConcert
 			this.statusStrip1.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
-
 		}
 		private System.Windows.Forms.ToolStripButton toolStripDelete;
 		private System.Windows.Forms.ColumnHeader songTab;

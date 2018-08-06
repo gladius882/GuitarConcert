@@ -39,7 +39,7 @@ namespace GuitarConcert
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-			this.toolStripGuide = new System.Windows.Forms.ToolStripButton();
+			this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
 			this.toolStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -54,25 +54,22 @@ namespace GuitarConcert
 			// 
 			// toolStrip1
 			// 
-			this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-			this.toolStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
 			this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-									this.toolStripGuide});
-			this.toolStrip1.Location = new System.Drawing.Point(0, 30);
+			this.toolStripButton1});
+			this.toolStrip1.Location = new System.Drawing.Point(0, 0);
 			this.toolStrip1.Name = "toolStrip1";
-			this.toolStrip1.Size = new System.Drawing.Size(845, 39);
+			this.toolStrip1.Size = new System.Drawing.Size(845, 25);
 			this.toolStrip1.TabIndex = 4;
 			this.toolStrip1.Text = "toolStrip1";
 			// 
-			// toolStripGuide
+			// toolStripButton1
 			// 
-			this.toolStripGuide.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.toolStripGuide.Image = ((System.Drawing.Image)(resources.GetObject("toolStripGuide.Image")));
-			this.toolStripGuide.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripGuide.Name = "toolStripGuide";
-			this.toolStripGuide.Size = new System.Drawing.Size(36, 36);
-			this.toolStripGuide.Text = "toolStripButton1";
-			this.toolStripGuide.Click += new System.EventHandler(this.ToolStripGuideClick);
+			this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+			this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripButton1.Name = "toolStripButton1";
+			this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+			this.toolStripButton1.Text = "toolStripButton1";
 			// 
 			// MainForm
 			// 
@@ -81,28 +78,22 @@ namespace GuitarConcert
 			this.ClientSize = new System.Drawing.Size(845, 256);
 			this.Controls.Add(this.toolStrip1);
 			this.Controls.Add(this.menuStrip1);
-			this.DisplayHeader = false;
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.IsMdiContainer = true;
 			this.KeyPreview = true;
 			this.MainMenuStrip = this.menuStrip1;
 			this.Name = "MainForm";
-			this.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
-			this.Style = MetroFramework.MetroColorStyle.Black;
-			this.Tag = "window";
 			this.Text = "GuitarConcert";
-			this.TransparencyKey = System.Drawing.Color.Empty;
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainFormFormClosed);
-			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainFormKeyDown);
+			this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MainFormKeyPress);
 			this.toolStrip1.ResumeLayout(false);
 			this.toolStrip1.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
+
 		}
 		private System.Windows.Forms.MenuStrip menuStrip1;
 		private System.Windows.Forms.ToolStrip toolStrip1;
-		private System.Windows.Forms.ToolStripButton toolStripGuide;
+		private System.Windows.Forms.ToolStripButton toolStripButton1;
 	}
 }

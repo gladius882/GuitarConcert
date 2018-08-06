@@ -6,9 +6,7 @@
  * 
  */
 using System;
-using System.IO;
-using AlphaTab.Importer;
-using AlphaTab.Model;
+using System.Collections.Generic;
 
 namespace GuitarConcert
 {
@@ -17,47 +15,17 @@ namespace GuitarConcert
 	/// </summary>
 	public class Tablature
 	{
-		#region Properties
+		public string Title;
+		public string Tuning;
 		
-		public Score GpTablature
+		public string[] Content;
+		
+		public Tablature(string tabString)
 		{
-			get
-			{
-				return GpTablature;
-			}
-			private set
-			{
-				GpTablature = value;
-			}
-		}
-		
-		public TextTablature TextTablature
-		{
-			get
-			{
-				return TextTablature;
-			}
-			private set
-			{
-				TextTablature = value;
-			}
-		}
-		
-		#endregion
-		
-		public Tablature()
-		{
-			// TODO Tablature constructor
-		}
-		
-		public void LoadText(string fileName)
-		{
-			// TODO Tablature.LoadText(string)
-		}
-		
-		public void LoadGp(string fileName)
-		{
-			this.GpTablature = ScoreLoader.LoadScoreFromBytes(File.ReadAllBytes(fileName));
+			Title = IniFile.ReadOption(tabString, "tabTitle");
+			Tuning = IniFile.ReadOption(tabString, "guitarTuning");
+			
+			Content = tabString.Split(',')[1].Split('\n');
 		}
 	}
 }

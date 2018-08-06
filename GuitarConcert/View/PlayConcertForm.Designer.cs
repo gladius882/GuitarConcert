@@ -22,7 +22,6 @@ namespace GuitarConcert
 		private System.Windows.Forms.ToolStrip toolStrip1;
 		private System.Windows.Forms.ToolStripButton toolStripPlay;
 		private System.Windows.Forms.PictureBox chordDiagramPicture;
-		private System.Windows.Forms.TextBox tabBox;
 		private System.Windows.Forms.CheckedListBox checkedListBox1;
 		private System.Windows.Forms.PictureBox pictureBox1;
 		private System.Windows.Forms.ListBox detailsList;
@@ -72,7 +71,7 @@ namespace GuitarConcert
 			this.splitContainer6 = new System.Windows.Forms.SplitContainer();
 			this.lyricsBox = new RichTextBoxLinks.RichTextBoxEx();
 			this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
-			this.tabBox = new System.Windows.Forms.TextBox();
+			this.alphaTabControl1 = new AlphaTab.Platform.CSharp.WinForms.AlphaTabControl();
 			this.splitContainer4 = new System.Windows.Forms.SplitContainer();
 			this.chordDiagramPicture = new System.Windows.Forms.PictureBox();
 			this.splitContainer5 = new System.Windows.Forms.SplitContainer();
@@ -178,7 +177,7 @@ namespace GuitarConcert
 			// 
 			this.toolStrip2.ImageScalingSize = new System.Drawing.Size(36, 36);
 			this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-			this.toolStripBack});
+									this.toolStripBack});
 			this.toolStrip2.Location = new System.Drawing.Point(0, 39);
 			this.toolStrip2.Name = "toolStrip2";
 			this.toolStrip2.Size = new System.Drawing.Size(242, 43);
@@ -199,9 +198,9 @@ namespace GuitarConcert
 			// 
 			this.toolStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
 			this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-			this.toolStripPlay,
-			this.toolStripPause,
-			this.toolStripStop});
+									this.toolStripPlay,
+									this.toolStripPause,
+									this.toolStripStop});
 			this.toolStrip1.Location = new System.Drawing.Point(0, 0);
 			this.toolStrip1.Name = "toolStrip1";
 			this.toolStrip1.Size = new System.Drawing.Size(242, 39);
@@ -268,7 +267,7 @@ namespace GuitarConcert
 			// 
 			// splitContainer6.Panel2
 			// 
-			this.splitContainer6.Panel2.Controls.Add(this.tabBox);
+			this.splitContainer6.Panel2.Controls.Add(this.alphaTabControl1);
 			this.splitContainer6.Size = new System.Drawing.Size(338, 592);
 			this.splitContainer6.SplitterDistance = 388;
 			this.splitContainer6.TabIndex = 0;
@@ -295,19 +294,19 @@ namespace GuitarConcert
 			this.vScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.VScrollBar1Scroll);
 			this.vScrollBar1.ValueChanged += new System.EventHandler(this.VScrollBar1ValueChanged);
 			// 
-			// tabBox
+			// alphaTabControl1
 			// 
-			this.tabBox.Cursor = System.Windows.Forms.Cursors.Arrow;
-			this.tabBox.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.tabBox.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.tabBox.Location = new System.Drawing.Point(0, 0);
-			this.tabBox.Multiline = true;
-			this.tabBox.Name = "tabBox";
-			this.tabBox.ReadOnly = true;
-			this.tabBox.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-			this.tabBox.Size = new System.Drawing.Size(338, 200);
-			this.tabBox.TabIndex = 0;
-			this.tabBox.WordWrap = false;
+			this.alphaTabControl1.AutoScroll = true;
+			this.alphaTabControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(99)))), ((int)(((byte)(98)))));
+			this.alphaTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.alphaTabControl1.ForeColor = System.Drawing.Color.WhiteSmoke;
+			this.alphaTabControl1.Location = new System.Drawing.Point(0, 0);
+			this.alphaTabControl1.Name = "alphaTabControl1";
+			this.alphaTabControl1.Padding = new System.Windows.Forms.Padding(10);
+			this.alphaTabControl1.Size = new System.Drawing.Size(338, 200);
+			this.alphaTabControl1.StavesMode = "default";
+			this.alphaTabControl1.TabIndex = 0;
+			this.alphaTabControl1.Text = "alphaTabControl1";
 			// 
 			// splitContainer4
 			// 
@@ -369,7 +368,6 @@ namespace GuitarConcert
 			// checkedListBox1
 			// 
 			this.checkedListBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.checkedListBox1.FormattingEnabled = true;
 			this.checkedListBox1.Location = new System.Drawing.Point(0, 0);
 			this.checkedListBox1.Name = "checkedListBox1";
 			this.checkedListBox1.Size = new System.Drawing.Size(222, 202);
@@ -403,7 +401,6 @@ namespace GuitarConcert
 			this.splitContainer2.ResumeLayout(false);
 			this.splitContainer6.Panel1.ResumeLayout(false);
 			this.splitContainer6.Panel2.ResumeLayout(false);
-			this.splitContainer6.Panel2.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
 			this.splitContainer6.ResumeLayout(false);
 			this.splitContainer4.Panel1.ResumeLayout(false);
@@ -416,7 +413,7 @@ namespace GuitarConcert
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
 			this.splitContainer5.ResumeLayout(false);
 			this.ResumeLayout(false);
-
 		}
+		private AlphaTab.Platform.CSharp.WinForms.AlphaTabControl alphaTabControl1;
 	}
 }

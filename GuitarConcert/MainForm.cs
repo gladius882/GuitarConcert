@@ -7,21 +7,32 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
+using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
+using System.Xml;
 using System.IO;
-using MetroFramework.Forms;
+using Sanford.Multimedia.Midi;
+using AlphaTab.Model;
+using AlphaTab.Importer;
+using Track = AlphaTab.Model.Track;
+using AlphaTab.Rendering;
 
 namespace GuitarConcert
 {
-	public partial class MainForm : MetroForm
+	/// <summary>
+	/// Description of MainForm.
+	/// </summary>
+	public partial class MainForm : Form
 	{
 		private Form View;
 		
 		public MainForm()
 		{
 			InitializeComponent();
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-			this.LoadView(new SongsForm());
+			
+			View  = new SongsForm();
+			this.LoadView(View);
 		}
 		
 		public void LoadView(Form view)
@@ -51,8 +62,10 @@ namespace GuitarConcert
 				child.Close();
 			}
 		}
-		
-		#region Events
+		void MainFormKeyPress(object sender, KeyPressEventArgs e)
+		{
+			// TODO Fullscreen switch when Ctrl + F has been pressed
+		}
 		
 		void MainFormFormClosed(object sender, FormClosedEventArgs e)
 		{
@@ -62,32 +75,5 @@ namespace GuitarConcert
 				file.Delete();
 			}
 		}
-		
-		void MainFormKeyDown(object sender, KeyEventArgs e)
-		{
-			if(e.Modifiers == Keys.Control)
-			{
-				if(e.KeyCode == Keys.F)
-				{
-					;
-				}
-			}
-		}
-
-		void ToolStripGuideClick(object sender, EventArgs e)
-		{
-			GuideForm f = new GuideForm();
-			f.Show();
-		}
-		
-		#endregion
-
-        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            foreach(Form f in this.MdiChildren)
-            {
-                f.Dispose();
-            }
-        }
 	}
 }

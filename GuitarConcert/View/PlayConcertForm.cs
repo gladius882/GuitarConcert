@@ -6,12 +6,12 @@
  * 
  */
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Drawing;
 using System.Windows.Forms;
 using System.IO;
 using Sanford.Multimedia.Midi;
+using AlphaTab.Importer;
+using AlphaTab.Model;
 
 namespace GuitarConcert
 {
@@ -22,6 +22,7 @@ namespace GuitarConcert
 	{
 		private Song currentSong;
 		private Chord currentChord;
+		private Score score;
 		private int tick = 0;
 		
 		public PlayConcertForm(Song sng)
@@ -30,8 +31,6 @@ namespace GuitarConcert
 			this.LoadSong(sng);
 			
 			this.lyricsBox.Font = new Font(SettingsSingleton.Instance.option["lyricsFontName"], float.Parse(SettingsSingleton.Instance.option["fontSize"]), System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.tabBox.Font = new Font(SettingsSingleton.Instance.option["tabFontName"], float.Parse(SettingsSingleton.Instance.option["fontSize"]), System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			
 			this.detailsList.Font = new Font(SettingsSingleton.Instance.option["fontName"], float.Parse(SettingsSingleton.Instance.option["fontSize"]), System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			
 			this.splitContainer1.SplitterDistance = int.Parse(SettingsSingleton.Instance.option["leftPanelWidth"]);
@@ -49,10 +48,12 @@ namespace GuitarConcert
 			this.LoadDetails();
 			
 			this.lyricsBox.Clear();
-			this.lyricsBox.Text = sng.Lyrics.Text;     		
+			this.lyricsBox.Text = sng.Lyrics.Text;
+			
+			
 			vScrollBar1.Minimum = 1;
 			vScrollBar1.Maximum = this.lyricsBox.Lines.Length;
-					
+			
 			
 			this.chordsListBox.Items.Clear();
 			foreach(string chrd in sng.SongBook.ChordsList)
@@ -60,81 +61,64 @@ namespace GuitarConcert
 				this.chordsListBox.Items.Add(chrd);
 			}
 			
-			List<string> allChords = sng.SongBook.ChordsList;
-			var uniqueChords= allChords.Distinct();
+			this.score = ScoreLoader.LoadScoreFromBytes(File.ReadAllBytes(
+				String.Format("{0}/{1}/{2} - {3}.gp5",
+				            "cache",
+				            "song",
+				            sng.ArtistName,
+				            sng.Name
+				           )));
 			
-			foreach(string c in uniqueChords)
-			{
-				if(c.Trim() == String.Empty)
-					continue;
-				
-				int len = this.lyricsBox.TextLength;
-      			int index = 0;
-				int lastIndex = this.lyricsBox.Text.LastIndexOf(c);
-
-	      		while ( index < lastIndex )
-	      		{
-	        		this.lyricsBox.Find(c, index, len, RichTextBoxFinds.None);
-	        		this.lyricsBox.SelectionBackColor = Color.Yellow;
-	        		index = this.lyricsBox.Text.IndexOf(c, index) + 1;
-	      		}
-			}
-			
+			this.alphaTabControl1.Tracks = new[] { score.Tracks[0] };
 			
 			string firstChord = this.chordsListBox.Items[0].ToString().Replace('/', ' ');
 			Chord currChrd = new Chord(PathGenerator.ChordDiagramPath(firstChord));
-			chordDiagramPicture.Image = currChrd.CreateBitmap();
-			
-			// TODO Move to Tablature class
-			try {
-				string tab = File.ReadAllText(String.Format("{0}/{1} - {2}.{3}",
-				                                            SettingsSingleton.Instance.option["songDirectory"],
-				                                            sng.getString("songArtist"), sng.getString("songTitle"),
-				                                            SettingsSingleton.Instance.option["tabExtension"]));
-			
-				this.tabBox.Clear();
-				this.tabBox.Text = tab;
-			}
-			catch(Exception exception) {
-				Logger.ToFile(exception);
-			}
+			chordDiagramPicture.Image = currChrd.CreateBitmap();	
 		}
 		
 		void LoadCover()
 		{
-			this.pictureBox1.ImageLocation = "assets/covers/"+
-				currentSong.getString("songArtist")+" - "+
-				currentSong.getString("songAlbum")+".jpg";
+			try {
+				this.pictureBox1.ImageLocation = "assets/covers/"+
+					currentSong.ArtistName+" - "+
+					currentSong.AlbumTitle+".jpg";
+			}
+			catch {
+				;
+			}
 		}
 		
 		void LoadDetails()
 		{
-			this.detailsList.Items.Add(currentSong.getString("songTitle"));
-			this.detailsList.Items.Add(currentSong.getString("songArtist"));
-			this.detailsList.Items.Add(currentSong.getString("songAlbum")+" ("+currentSong.getString("releaseYear")+")");
+			this.detailsList.Items.Add(currentSong.Name);
+			this.detailsList.Items.Add(currentSong.ArtistName);
+			this.detailsList.Items.Add(currentSong.AlbumTitle+" ("+currentSong.Release+")");
 			this.detailsList.Items.Add(String.Empty);
-			this.detailsList.Items.Add("Gatunek: " + currentSong.getString("genre"));
-			this.detailsList.Items.Add("Metrum: " + currentSong.getString("metrum"));
-			this.detailsList.Items.Add("Kapo: " + currentSong.getString("capo"));
+			this.detailsList.Items.Add("Gatunek: " + currentSong.Tags[0].Name);
+			this.detailsList.Items.Add("Metrum: " + currentSong.Metrum);
+			this.detailsList.Items.Add("Kapo: " + currentSong.Capo);
 		}
 		
 		void ToolStripPlayClick(object sender, EventArgs e)
 		{
-			this.timer.Interval = 60000 / this.currentSong.getInt("bpm");
+			this.timer.Interval = 60000 / this.currentSong.Bpm;
 			timer.Start();
 		}
 		
 		private void Delay(object sender, EventArgs e)
 		{	
-			if(tick >= currentSong.getInt("autoScrollDelay"))
+			if(tick >= currentSong.AutoscrollDelay)
 			{
-				if(this.tick%currentSong.getInt("autoScrollSpeed") == 0)
+				if(this.tick%currentSong.AutoscrollSpeed == 0)
 				{
 //					int linesPerPage = lyricsBox.Height / (int.Parse(lyricsBox.Font.Size.ToString()) + lyricsBox.Margin.Vertical ) - 1;
 //				
 //					int lineToScroll = linesPerPage + (tick - currentSong.getInt("autoScrollDelay") ) / currentSong.getInt("autoScrollSpeed");
 //					ScrollLyricsToLine(lineToScroll);
-					vScrollBar1.Value++;
+					if(vScrollBar1.Value < vScrollBar1.Maximum)
+					{
+						vScrollBar1.Value++;
+					}
 				}
 			}
 			
