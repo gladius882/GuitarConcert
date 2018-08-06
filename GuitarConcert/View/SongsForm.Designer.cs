@@ -49,8 +49,6 @@ namespace GuitarConcert
 			this.songArtist = new System.Windows.Forms.ColumnHeader();
 			this.songTitle = new System.Windows.Forms.ColumnHeader();
 			this.songAlbum = new System.Windows.Forms.ColumnHeader();
-			this.songChords = new System.Windows.Forms.ColumnHeader();
-			this.songTab = new System.Windows.Forms.ColumnHeader();
 			this.songContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.contextMenuItemAdd = new System.Windows.Forms.ToolStripMenuItem();
 			this.contextMenuItemDelete = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,7 +62,7 @@ namespace GuitarConcert
 			// 
 			// toolStrip1
 			// 
-			this.toolStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
+			this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
 			this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
 									this.toolStripAdd,
 									this.toolStripDelete,
@@ -134,14 +132,15 @@ namespace GuitarConcert
 			// 
 			// listViewSongs
 			// 
+			this.listViewSongs.AllowColumnReorder = true;
 			this.listViewSongs.BackColor = System.Drawing.Color.Black;
+			this.listViewSongs.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("listViewSongs.BackgroundImage")));
+			this.listViewSongs.BackgroundImageTiled = true;
 			this.listViewSongs.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.listViewSongs.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
 									this.songArtist,
 									this.songTitle,
-									this.songAlbum,
-									this.songChords,
-									this.songTab});
+									this.songAlbum});
 			this.listViewSongs.ContextMenuStrip = this.songContextMenu;
 			this.listViewSongs.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.listViewSongs.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -150,7 +149,8 @@ namespace GuitarConcert
 			this.listViewSongs.Location = new System.Drawing.Point(0, 39);
 			this.listViewSongs.MultiSelect = false;
 			this.listViewSongs.Name = "listViewSongs";
-			this.listViewSongs.Size = new System.Drawing.Size(914, 222);
+			this.listViewSongs.ShowItemToolTips = true;
+			this.listViewSongs.Size = new System.Drawing.Size(914, 358);
 			this.listViewSongs.Sorting = System.Windows.Forms.SortOrder.Ascending;
 			this.listViewSongs.TabIndex = 1;
 			this.listViewSongs.UseCompatibleStateImageBehavior = false;
@@ -168,16 +168,6 @@ namespace GuitarConcert
 			// songAlbum
 			// 
 			this.songAlbum.Text = "Album";
-			// 
-			// songChords
-			// 
-			this.songChords.Text = "CHRD";
-			this.songChords.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			// 
-			// songTab
-			// 
-			this.songTab.Text = "TAB";
-			this.songTab.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// songContextMenu
 			// 
@@ -211,7 +201,7 @@ namespace GuitarConcert
 			// 
 			this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
 									this.toolStripStatusLabel});
-			this.statusStrip1.Location = new System.Drawing.Point(0, 239);
+			this.statusStrip1.Location = new System.Drawing.Point(0, 375);
 			this.statusStrip1.Name = "statusStrip1";
 			this.statusStrip1.Size = new System.Drawing.Size(914, 22);
 			this.statusStrip1.TabIndex = 2;
@@ -226,7 +216,7 @@ namespace GuitarConcert
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(914, 261);
+			this.ClientSize = new System.Drawing.Size(914, 397);
 			this.Controls.Add(this.statusStrip1);
 			this.Controls.Add(this.listViewSongs);
 			this.Controls.Add(this.toolStrip1);
@@ -241,8 +231,6 @@ namespace GuitarConcert
 			this.PerformLayout();
 		}
 		private System.Windows.Forms.ToolStripButton toolStripDelete;
-		private System.Windows.Forms.ColumnHeader songTab;
-		private System.Windows.Forms.ColumnHeader songChords;
 		private System.Windows.Forms.ColumnHeader songAlbum;
 		private System.Windows.Forms.ColumnHeader songTitle;
 		private System.Windows.Forms.ColumnHeader songArtist;

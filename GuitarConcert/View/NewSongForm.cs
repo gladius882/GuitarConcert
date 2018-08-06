@@ -366,15 +366,11 @@ namespace GuitarConcert
 			
 			string coverImage = SongArtist.Text + " - " + SongAlbum.Text + ".png";
 			if(Cover.ImageLocation != String.Empty)
-				File.Move(Cover.ImageLocation, "assets/covers/"+coverImage);
+				File.Copy(Cover.ImageLocation, "assets/covers/"+coverImage);
 			
-			// FIXME move artist image
-//			string artistImage = SongArtist.Text + ".png";
-//			if(File.Exists(ArtistPicture.ImageLocation));
-//			{
-//				MessageBox.Show(ArtistPicture.ImageLocation.GetType().ToString());
-//				File.Move(ArtistPicture.ImageLocation, "assets/artists/"+artistImage);
-//			}
+			string artistImage = SongArtist.Text + ".png";
+			if(ArtistPicture.ImageLocation != String.Empty)
+				File.Copy(ArtistPicture.ImageLocation, "assets/artists/"+artistImage);
 		}
 		
 		void PictureClick(object sender, System.EventArgs e)

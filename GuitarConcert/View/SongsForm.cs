@@ -47,11 +47,9 @@ namespace GuitarConcert
 		{
 			int windowWidth = Screen.PrimaryScreen.WorkingArea.Width;
 			
-			this.songArtist.Width = (int)(0.3*windowWidth);
-			this.songTitle.Width = (int)(0.3*windowWidth);
-			this.songAlbum.Width = (int)(0.3*windowWidth);
-			this.songChords.Width = (int)(0.05*windowWidth);
-			this.songTab.Width = (int)(0.048*windowWidth);
+			this.songArtist.Width = (int)(0.33*windowWidth);
+			this.songTitle.Width = (int)(0.34*windowWidth);
+			this.songAlbum.Width = (int)(0.33*windowWidth);
 		}
 		
 		private void LoadList(string fileName)
@@ -117,6 +115,7 @@ namespace GuitarConcert
 				content = content.Replace(rowString, "");
 				
 				File.WriteAllText(file, content);
+				File.Delete("song/" + artist + " - " + title + ".gc");
 				
 				this.listViewSongs.Items.RemoveAt(this.listViewSongs.SelectedItems[0].Index);
 			}
