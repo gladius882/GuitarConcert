@@ -38,8 +38,8 @@
     <Reference Include="DotNetZip">
       <HintPath>..\packages\DotNetZip.1.10.1\lib\net20\DotNetZip.dll</HintPath>
     </Reference>
-    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a">
-      <HintPath>bin\Debug\MetroFramework.dll</HintPath>
+    <Reference Include="LastFmLib">
+      <HintPath>..\..\LastFmLib\LastFmLibDll\bin\Debug\LastFmLib.dll</HintPath>
     </Reference>
     <Reference Include="RichTextBoxLinks">
       <HintPath>..\..\..\RichTextBoxLinks\bin\Release\RichTextBoxLinks.dll</HintPath>
@@ -68,14 +68,6 @@
     <Compile Include="Helpers\Logger.cs" />
     <Compile Include="Helpers\PathGenerator.cs" />
     <Compile Include="Helpers\SettingsSingleton.cs" />
-    <Compile Include="LastFmLib\Album.cs" />
-    <Compile Include="LastFmLib\Artist.cs" />
-    <Compile Include="LastFmLib\Image.cs" />
-    <Compile Include="LastFmLib\ShortArtist.cs" />
-    <Compile Include="LastFmLib\ShortTag.cs" />
-    <Compile Include="LastFmLib\ShortTrack.cs" />
-    <Compile Include="LastFmLib\Tag.cs" />
-    <Compile Include="LastFmLib\Track.cs" />
     <Compile Include="MainForm.cs" />
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -129,7 +121,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Helpers" />
-    <Folder Include="LastFmLib" />
     <Folder Include="Song" />
     <Folder Include="View" />
   </ItemGroup>
