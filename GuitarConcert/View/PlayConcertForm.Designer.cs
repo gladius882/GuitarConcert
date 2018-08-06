@@ -164,7 +164,8 @@ namespace GuitarConcert
 			this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
 			this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
-			this.pictureBox1.ImageLocation = "assets/covers/unknown.jpg";
+			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+			this.pictureBox1.ImageLocation = "assets/covers/unknown.png";
 			this.pictureBox1.Location = new System.Drawing.Point(0, 0);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(242, 225);

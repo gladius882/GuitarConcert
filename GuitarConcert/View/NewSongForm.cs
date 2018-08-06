@@ -48,6 +48,15 @@ namespace GuitarConcert
 				string[] chrd = file.Split(new[] {'/', '\\', '.'});
 				ChordsList.Items.Add(chrd[chrd.Length-2].Replace(' ', '/'));
 			}
+			
+			foreach(string file in Directory.GetFiles("data/artist"))
+			{
+				string[] artist = file.Split(new[] {'/', '\\', '.'});
+				SongArtist.AutoCompleteCustomSource.Add(artist[artist.Length-2]);
+			}
+			
+			Cover.ImageLocation = String.Empty;
+			ArtistPicture.ImageLocation = String.Empty;
 		}
 		
 		void ClearClick(object sender, EventArgs e)
@@ -208,13 +217,32 @@ namespace GuitarConcert
 		
 		void AddClick(object sender, EventArgs e)
 		{
-			CreateSongFile();
-			CreateLyricsFile();
-			CreateChordsFile();
-			PackFiles();
-			CreateArtistIfNotExists();
-			CreateAlbumIfNotExists();
-			MoveFiles();
+			if(SongExists(SongArtist.Text, SongTitle.Text))
+			{
+				MessageBox.Show("Ta piosenka już istnieje");
+				return;
+			}
+			
+//			try {
+				CreateSongFile();
+				CreateLyricsFile();
+				CreateChordsFile();
+				PackFiles();
+				CreateArtistIfNotExists();
+				CreateAlbumIfNotExists();
+				MoveFiles();
+				AddEntryToList();
+				(MdiParent as MainForm).LoadView(new SongsForm());
+//			}
+//			catch {
+//				MessageBox.Show("Wystąpił błąd podczas dodawania piosenki", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+//			}
+		}
+		
+		private bool SongExists(string artist, string song)
+		{
+			string file = "song/" + artist + " - " + song + ".gc";
+			return File.Exists(file);
 		}
 		
 		private void CreateSongFile()
@@ -306,6 +334,9 @@ namespace GuitarConcert
 		
 		private void CreateArtistIfNotExists()
 		{
+			if(SongArtist.Text.Trim() == String.Empty)
+				return;
+			
 			if(File.Exists("data/artist/"+SongArtist.Text.Trim()+".xml") == false)
 			{
 				Artist artist = new Artist();
@@ -316,6 +347,9 @@ namespace GuitarConcert
 		
 		private void CreateAlbumIfNotExists()
 		{
+			if(SongArtist.Text.Trim() == String.Empty || SongAlbum.Text.Trim() == String.Empty)
+				return;
+			
 			string file = SongArtist.Text + " - " + SongAlbum.Text + ".xml";
 			if(File.Exists("data/album/"+file) == false)
 			{
@@ -329,11 +363,30 @@ namespace GuitarConcert
 		{
 			string gcFile = SongArtist.Text + " - " + SongTitle.Text + ".gc";
 			File.Move("cache/add/"+gcFile, "song/"+gcFile);
+			
+			string coverImage = SongArtist.Text + " - " + SongAlbum.Text + ".png";
+			if(Cover.ImageLocation != String.Empty)
+				File.Move(Cover.ImageLocation, "assets/covers/"+coverImage);
+			
+			// FIXME move artist image
+//			string artistImage = SongArtist.Text + ".png";
+//			if(File.Exists(ArtistPicture.ImageLocation));
+//			{
+//				MessageBox.Show(ArtistPicture.ImageLocation.GetType().ToString());
+//				File.Move(ArtistPicture.ImageLocation, "assets/artists/"+artistImage);
+//			}
 		}
 		
 		void PictureClick(object sender, System.EventArgs e)
 		{
 			PictureBox box = sender as PictureBox;
+			
+			if((e as MouseEventArgs).Button == MouseButtons.Right)
+			{
+				box.ImageLocation = String.Empty;
+				return;
+			}
+			
 			using(OpenFileDialog dialog = new OpenFileDialog())
 			{
 				dialog.Filter = "PNG|*.png";
@@ -347,6 +400,16 @@ namespace GuitarConcert
 					box.ImageLocation = dialog.FileName;
 				}
 			}
+		}
+		
+		private void AddEntryToList()
+		{
+			string entry = SongArtist.Text.Trim() + ";" + SongTitle.Text.Trim() + ";" + SongAlbum.Text.Trim();
+			
+			if(ListTypeSongs.Checked == true)
+				File.AppendAllText("data/songs.list" ,entry + Environment.NewLine);
+			else
+				File.AppendAllText("data/wish.list" ,entry + Environment.NewLine);
 		}
 	}
 }

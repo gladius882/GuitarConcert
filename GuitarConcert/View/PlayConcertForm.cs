@@ -61,15 +61,20 @@ namespace GuitarConcert
 				this.chordsListBox.Items.Add(chrd);
 			}
 			
-			this.score = ScoreLoader.LoadScoreFromBytes(File.ReadAllBytes(
-				String.Format("{0}/{1}/{2} - {3}.gp5",
-				            "cache",
-				            "song",
-				            sng.ArtistName,
-				            sng.Name
-				           )));
-			
-			this.alphaTabControl1.Tracks = new[] { score.Tracks[0] };
+			try {
+				this.score = ScoreLoader.LoadScoreFromBytes(File.ReadAllBytes(
+					String.Format("{0}/{1}/{2} - {3}.gp5",
+					            "cache",
+					            "song",
+					            sng.ArtistName,
+					            sng.Name
+					           )));
+				
+				this.alphaTabControl1.Tracks = new[] { score.Tracks[0] };
+			}
+			catch {
+				;
+			}
 			
 			string firstChord = this.chordsListBox.Items[0].ToString().Replace('/', ' ');
 			Chord currChrd = new Chord(PathGenerator.ChordDiagramPath(firstChord));
@@ -81,7 +86,7 @@ namespace GuitarConcert
 			try {
 				this.pictureBox1.ImageLocation = "assets/covers/"+
 					currentSong.ArtistName+" - "+
-					currentSong.AlbumTitle+".jpg";
+					currentSong.AlbumTitle+".png";
 			}
 			catch {
 				;
