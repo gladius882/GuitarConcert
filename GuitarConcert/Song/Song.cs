@@ -31,7 +31,6 @@ namespace GuitarConcert
 		public ChordsSongBook SongBook = new ChordsSongBook();
 		
 		private GcFile gc;
-		private string errorString;
 		
 		public Song() : base()
 		{
@@ -45,7 +44,6 @@ namespace GuitarConcert
 		
 		public Song(string artist, string title)
 		{
-			this.errorString = "None";
 			
 			DirectoryInfo dir = new DirectoryInfo("cache/song");
 			foreach(FileInfo file in dir.GetFiles())
@@ -74,7 +72,7 @@ namespace GuitarConcert
 			this.Release = int.Parse(doc.SelectNodes("lfm/track/gc/release")[0].InnerText);
 		}
 		
-		public void Save(string file)
+		public new void Save(string file)
 		{
 			base.Save(file);
 			

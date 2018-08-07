@@ -51,7 +51,7 @@ namespace GuitarConcert
 				this.A2 = int.Parse(doc.GetElementsByTagName("a2")[0].InnerText);
 				this.E2 = int.Parse(doc.GetElementsByTagName("e2")[0].InnerText);
 			}
-			catch(Exception exception) {
+			catch {
 				RestoreDefault();
 			}
 		}

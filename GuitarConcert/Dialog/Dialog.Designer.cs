@@ -156,6 +156,6 @@ namespace GuitarConcert
 		protected System.Windows.Forms.Panel Body;
 		protected System.Windows.Forms.Panel Header;
 		private System.Windows.Forms.Button buttonClose;
-		private System.Windows.Forms.Panel Container;
+		private new System.Windows.Forms.Panel Container;
 	}
 }

@@ -84,5 +84,27 @@ namespace GuitarConcert
 				}
 			}
 		}
+		
+		void AddTagClick(object sender, System.EventArgs e)
+		{
+			using(TagDialog dialog = new TagDialog())
+			{
+				if(dialog.ShowDialog() == DialogResult.OK)
+				{
+					if(File.Exists("data/tags/"+dialog.TagName+".xml"))
+					{
+						MessageBox.Show("Istnieje już tag o takiej nazwie");
+						return;
+					}
+					
+					Tag tag = new Tag();
+					tag.Name = dialog.TagName;
+					tag.Summary = dialog.TagSummmary;
+					tag.Description = dialog.TagDescription;
+					tag.Save("data/tags/"+dialog.TagName+".xml");
+					(MdiParent as MainForm).LoadView(new TagsForm());
+				}
+			}
+		}
 	}
 }
