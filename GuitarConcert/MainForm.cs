@@ -83,5 +83,10 @@ namespace GuitarConcert
 		{
 			LoadView(new SongsForm());
 		}
+		
+		void SettingsViewClick(object sender, EventArgs e)
+		{
+			LoadView(new SettingsForm());
+		}
 	}
 }

@@ -63,7 +63,7 @@ namespace GuitarConcert
 			
 			try {
 				this.score = ScoreLoader.LoadScoreFromBytes(File.ReadAllBytes(
-					String.Format("{0}/{1}/{2} - {3}.gp5",
+					String.Format("{0}/{1}/{2} - {3}.gp3",
 					            "cache",
 					            "song",
 					            sng.ArtistName,

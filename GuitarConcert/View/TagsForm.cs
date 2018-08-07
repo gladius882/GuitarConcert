@@ -31,7 +31,7 @@ namespace GuitarConcert
 			{
 				string[] path = file.Split(new[] {'/', '\\', '.'});
 				string tag = path[path.Length-2];
-
+				
 				flowLayoutPanel1.Controls.Add(CreateTagLabel(tag));
 			}
 		}
@@ -39,16 +39,16 @@ namespace GuitarConcert
 		private Label CreateTagLabel(string tagName)
 		{
 			Label label = new Label();
+			label.AutoSize = true;
 			label.Text = tagName;
 			label.TextAlign = ContentAlignment.MiddleCenter;
-			label.Width = (tagName.Length*12)+15;
-			label.Height = 30;
 			label.Font = new Font("Arial", 12, FontStyle.Bold, GraphicsUnit.Point, ((byte)(238)));
 			label.ForeColor = Color.Navy;
-			label.BackColor = Color.WhiteSmoke;
+			label.BackColor = Color.Gainsboro;
 			label.BorderStyle = BorderStyle.FixedSingle;
 			label.FlatStyle = FlatStyle.Popup;
-			label.Margin = new Padding(5, 5, 5, 5);
+			label.Margin = new Padding(5);
+			label.Padding = new Padding(5);
 			label.Cursor = Cursors.Hand;
 			label.MouseHover += new EventHandler(TagMouseHover);
 			label.MouseLeave += new EventHandler(TagMouseLeave);
@@ -65,7 +65,7 @@ namespace GuitarConcert
 		void TagMouseLeave(object sender, EventArgs e)
 		{
 			Label label = sender as Label;
-			label.BackColor = Color.WhiteSmoke;
+			label.BackColor = Color.Gainsboro;
 		}
 		
 		void TagMouseClick(object sender, MouseEventArgs e)

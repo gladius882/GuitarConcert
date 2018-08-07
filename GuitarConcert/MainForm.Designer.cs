@@ -41,6 +41,8 @@ namespace GuitarConcert
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
 			this.SongsView = new System.Windows.Forms.ToolStripButton();
 			this.TagsView = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+			this.SettingsView = new System.Windows.Forms.ToolStripButton();
 			this.toolStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -58,7 +60,9 @@ namespace GuitarConcert
 			this.toolStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
 			this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
 									this.SongsView,
-									this.TagsView});
+									this.TagsView,
+									this.toolStripSeparator1,
+									this.SettingsView});
 			this.toolStrip1.Location = new System.Drawing.Point(0, 0);
 			this.toolStrip1.Name = "toolStrip1";
 			this.toolStrip1.Size = new System.Drawing.Size(845, 39);
@@ -85,6 +89,21 @@ namespace GuitarConcert
 			this.TagsView.Text = "Zarządzaj tagami";
 			this.TagsView.Click += new System.EventHandler(this.TagsViewClick);
 			// 
+			// toolStripSeparator1
+			// 
+			this.toolStripSeparator1.Name = "toolStripSeparator1";
+			this.toolStripSeparator1.Size = new System.Drawing.Size(6, 39);
+			// 
+			// SettingsView
+			// 
+			this.SettingsView.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.SettingsView.Image = ((System.Drawing.Image)(resources.GetObject("SettingsView.Image")));
+			this.SettingsView.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.SettingsView.Name = "SettingsView";
+			this.SettingsView.Size = new System.Drawing.Size(36, 36);
+			this.SettingsView.Text = "Ustawienia";
+			this.SettingsView.Click += new System.EventHandler(this.SettingsViewClick);
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -106,6 +125,8 @@ namespace GuitarConcert
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.ToolStripButton SettingsView;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
 		private System.Windows.Forms.ToolStripButton SongsView;
 		private System.Windows.Forms.ToolStripButton TagsView;
 		private System.Windows.Forms.MenuStrip menuStrip1;
