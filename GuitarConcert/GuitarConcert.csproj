@@ -63,6 +63,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dialog\Dialog.cs" />
+    <Compile Include="Dialog\Dialog.Designer.cs">
+      <DependentUpon>Dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\TagDialog.cs" />
+    <Compile Include="Dialog\TagDialog.Designer.cs">
+      <DependentUpon>TagDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\GcFile.cs" />
     <Compile Include="Helpers\IniFile.cs" />
     <Compile Include="Helpers\Logger.cs" />
@@ -83,6 +91,9 @@
     <Compile Include="View\NewSongForm.Designer.cs">
       <DependentUpon>NewSongForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\NewSongForm.Events.cs">
+      <DependentUpon>NewSongForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\PlayConcertForm.cs" />
     <Compile Include="View\PlayConcertForm.Designer.cs">
       <DependentUpon>PlayConcertForm.cs</DependentUpon>
@@ -99,8 +110,18 @@
     <Compile Include="View\SongsForm.Designer.cs">
       <DependentUpon>SongsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\TagsForm.cs" />
+    <Compile Include="View\TagsForm.Designer.cs">
+      <DependentUpon>TagsForm.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Dialog\Dialog.resx">
+      <DependentUpon>Dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\TagDialog.resx">
+      <DependentUpon>TagDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -118,9 +139,13 @@
     <EmbeddedResource Include="View\SongsForm.resx">
       <DependentUpon>SongsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\TagsForm.resx">
+      <DependentUpon>TagsForm.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Helpers" />
+    <Folder Include="Dialog" />
     <Folder Include="Song" />
     <Folder Include="View" />
   </ItemGroup>

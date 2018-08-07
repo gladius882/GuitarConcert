@@ -31,8 +31,7 @@ namespace GuitarConcert
 		{
 			InitializeComponent();
 			
-			View  = new SongsForm();
-			this.LoadView(View);
+			this.LoadView(new SongsForm());
 		}
 		
 		public void LoadView(Form view)
@@ -69,11 +68,20 @@ namespace GuitarConcert
 		
 		void MainFormFormClosed(object sender, FormClosedEventArgs e)
 		{
-			// Clear cache
 			foreach(FileInfo file in new DirectoryInfo("cache/song").GetFiles())
 			{
 				file.Delete();
 			}
+		}
+		
+		void TagsViewClick(object sender, EventArgs e)
+		{
+			LoadView(new TagsForm());
+		}
+		
+		void SongsViewClick(object sender, EventArgs e)
+		{
+			LoadView(new SongsForm());
 		}
 	}
 }

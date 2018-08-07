@@ -39,7 +39,8 @@ namespace GuitarConcert
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-			this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+			this.SongsView = new System.Windows.Forms.ToolStripButton();
+			this.TagsView = new System.Windows.Forms.ToolStripButton();
 			this.toolStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -56,21 +57,33 @@ namespace GuitarConcert
 			// 
 			this.toolStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
 			this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-									this.toolStripButton1});
+									this.SongsView,
+									this.TagsView});
 			this.toolStrip1.Location = new System.Drawing.Point(0, 0);
 			this.toolStrip1.Name = "toolStrip1";
-			this.toolStrip1.Size = new System.Drawing.Size(845, 25);
+			this.toolStrip1.Size = new System.Drawing.Size(845, 39);
 			this.toolStrip1.TabIndex = 4;
 			this.toolStrip1.Text = "toolStrip1";
 			// 
-			// toolStripButton1
+			// SongsView
 			// 
-			this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-			this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripButton1.Name = "toolStripButton1";
-			this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-			this.toolStripButton1.Text = "toolStripButton1";
+			this.SongsView.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.SongsView.Image = ((System.Drawing.Image)(resources.GetObject("SongsView.Image")));
+			this.SongsView.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.SongsView.Name = "SongsView";
+			this.SongsView.Size = new System.Drawing.Size(36, 36);
+			this.SongsView.Text = "Lista piosenek";
+			this.SongsView.Click += new System.EventHandler(this.SongsViewClick);
+			// 
+			// TagsView
+			// 
+			this.TagsView.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.TagsView.Image = ((System.Drawing.Image)(resources.GetObject("TagsView.Image")));
+			this.TagsView.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.TagsView.Name = "TagsView";
+			this.TagsView.Size = new System.Drawing.Size(36, 36);
+			this.TagsView.Text = "Zarządzaj tagami";
+			this.TagsView.Click += new System.EventHandler(this.TagsViewClick);
 			// 
 			// MainForm
 			// 
@@ -93,8 +106,9 @@ namespace GuitarConcert
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.ToolStripButton SongsView;
+		private System.Windows.Forms.ToolStripButton TagsView;
 		private System.Windows.Forms.MenuStrip menuStrip1;
 		private System.Windows.Forms.ToolStrip toolStrip1;
-		private System.Windows.Forms.ToolStripButton toolStripButton1;
 	}
 }

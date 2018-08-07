@@ -69,3 +69,6 @@ C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\bin\Debug\DotNetZip.
 C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\obj\Debug\GuitarConcert.NewSongForm.resources
 C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\bin\Debug\LastFmLib.dll
 C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\bin\Debug\LastFmLib.pdb
+C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\obj\Debug\GuitarConcert.Dialog.resources
+C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\obj\Debug\GuitarConcert.TagsForm.resources
+C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\obj\Debug\GuitarConcert.TagDialog.resources

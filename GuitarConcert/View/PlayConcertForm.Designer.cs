@@ -180,7 +180,7 @@ namespace GuitarConcert
 									this.toolStripBack});
 			this.toolStrip2.Location = new System.Drawing.Point(0, 39);
 			this.toolStrip2.Name = "toolStrip2";
-			this.toolStrip2.Size = new System.Drawing.Size(242, 43);
+			this.toolStrip2.Size = new System.Drawing.Size(242, 39);
 			this.toolStrip2.TabIndex = 1;
 			this.toolStrip2.Text = "toolStrip2";
 			// 
@@ -188,9 +188,10 @@ namespace GuitarConcert
 			// 
 			this.toolStripBack.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
 			this.toolStripBack.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBack.Image")));
+			this.toolStripBack.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.toolStripBack.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.toolStripBack.Name = "toolStripBack";
-			this.toolStripBack.Size = new System.Drawing.Size(40, 40);
+			this.toolStripBack.Size = new System.Drawing.Size(36, 36);
 			this.toolStripBack.Text = "Wstecz";
 			this.toolStripBack.Click += new System.EventHandler(this.ToolStripBackClick);
 			// 
