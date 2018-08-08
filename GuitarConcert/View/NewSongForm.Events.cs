@@ -42,7 +42,7 @@ namespace GuitarConcert
 				return;
 			}
 			
-			try {
+//			try {
 				CreateSongFile();
 				CreateLyricsFile();
 				CreateChordsFile();
@@ -52,10 +52,10 @@ namespace GuitarConcert
 				MoveFiles();
 				AddEntryToList();
 				(MdiParent as MainForm).LoadView(new SongsForm());
-			}
-			catch {
-				MessageBox.Show("Wystąpił błąd podczas dodawania piosenki", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
-			}
+//			}
+//			catch(Exception ex) {
+//				MessageBox.Show("Wystąpił błąd podczas dodawania piosenki\n"+ex.Message, "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+//			}
 		}
 		
 		void CancelClick(object sender, EventArgs e)
@@ -247,6 +247,30 @@ namespace GuitarConcert
 					
 					if(albumFile.StartsWith(formArtist))
 						SongAlbum.AutoCompleteCustomSource.Add(albumName);
+				}
+			}
+		}
+		
+		void PdfDoubleClick(object sender, EventArgs e)
+		{
+			using(OpenFileDialog dialog = new OpenFileDialog())
+			{
+				dialog.Filter = "PDF file|*.pdf";
+				dialog.FilterIndex = 1;
+				dialog.Multiselect = false;
+				dialog.RestoreDirectory = true;
+				dialog.ShowReadOnly = true;
+				dialog.SupportMultiDottedExtensions = true;
+				
+				if(dialog.ShowDialog() == DialogResult.OK)
+				{
+					string newPath = Environment.CurrentDirectory + @"\cache\add\" + SongArtist.Text + " - " + SongTitle.Text + ".pdf";
+					
+					if(File.Exists(newPath))
+					   File.Delete(newPath);
+					
+					File.Copy(dialog.FileName, newPath);
+					Pdf.Text = dialog.FileName;
 				}
 			}
 		}

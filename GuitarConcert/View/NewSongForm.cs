@@ -54,6 +54,9 @@ namespace GuitarConcert
 				string[] artist = file.Split(new[] {'/', '\\', '.'});
 				SongArtist.AutoCompleteCustomSource.Add(artist[artist.Length-2]);
 			}
+			
+			ArtistPicture.ImageLocation = String.Empty;
+			Cover.ImageLocation = String.Empty;
 		}
 		
 		private bool SongExists(string artist, string song)
@@ -128,7 +131,13 @@ namespace GuitarConcert
 			{
 				string[] mid = Midi.Text.Split(new[] {'/', '\\', '.'});
 				string extension = mid[mid.Length-1];
-				MessageBox.Show(extension);
+				files.Add(filePattern+"."+extension);
+			}
+			
+			if(Pdf.Text.Contains(":"))
+			{
+				string[] pdf = Pdf.Text.Split(new[] {'/', '\\', '.'});
+				string extension = pdf[pdf.Length-1];
 				files.Add(filePattern+"."+extension);
 			}
 			
@@ -169,11 +178,17 @@ namespace GuitarConcert
 			
 			string coverImage = SongArtist.Text + " - " + SongAlbum.Text + ".png";
 			if(Cover.ImageLocation != String.Empty)
-				File.Copy(Cover.ImageLocation, "assets/covers/"+coverImage);
+			{
+				if(File.Exists("assets/covers/"+coverImage) == false)
+					File.Copy(Cover.ImageLocation, "assets/covers/"+coverImage);
+			}
 			
 			string artistImage = SongArtist.Text + ".png";
 			if(ArtistPicture.ImageLocation != String.Empty)
-				File.Copy(ArtistPicture.ImageLocation, "assets/artists/"+artistImage);
+			{
+				if(File.Exists("assets/artists/"+artistImage) == false)
+					File.Copy(ArtistPicture.ImageLocation, "assets/artists/"+artistImage);
+			}
 		}
 		
 		private void AddEntryToList()

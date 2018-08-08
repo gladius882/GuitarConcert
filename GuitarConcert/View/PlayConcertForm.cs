@@ -62,18 +62,13 @@ namespace GuitarConcert
 			}
 			
 			try {
-				this.score = ScoreLoader.LoadScoreFromBytes(File.ReadAllBytes(
-					String.Format("{0}/{1}/{2} - {3}.gp3",
-					            "cache",
-					            "song",
-					            sng.ArtistName,
-					            sng.Name
-					           )));
-				
-				this.alphaTabControl1.Tracks = new[] { score.Tracks[0] };
+				string pdf = String.Format(Environment.CurrentDirectory+"/cache/song/{0} - {1}.pdf",
+				                           currentSong.ArtistName,
+				                           currentSong.Name);
+				webBrowser1.Url = new Uri("file://" + pdf);
 			}
 			catch {
-				;
+				MessageBox.Show("Error");
 			}
 			
 			string firstChord = this.chordsListBox.Items[0].ToString().Replace('/', ' ');

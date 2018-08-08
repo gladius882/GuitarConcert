@@ -81,10 +81,12 @@ namespace GuitarConcert
 			this.Add = new System.Windows.Forms.Button();
 			this.groupAttachments = new System.Windows.Forms.GroupBox();
 			this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+			this.label21 = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
 			this.Tablature = new System.Windows.Forms.TextBox();
 			this.Midi = new System.Windows.Forms.TextBox();
 			this.label6 = new System.Windows.Forms.Label();
+			this.Pdf = new System.Windows.Forms.TextBox();
 			this.button2 = new System.Windows.Forms.Button();
 			this.groupLyrics = new System.Windows.Forms.GroupBox();
 			this.Lyrics = new System.Windows.Forms.RichTextBox();
@@ -757,7 +759,7 @@ namespace GuitarConcert
 			this.groupActions.Dock = System.Windows.Forms.DockStyle.Top;
 			this.groupActions.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.groupActions.ForeColor = System.Drawing.SystemColors.Highlight;
-			this.groupActions.Location = new System.Drawing.Point(30, 210);
+			this.groupActions.Location = new System.Drawing.Point(30, 371);
 			this.groupActions.Name = "groupActions";
 			this.groupActions.Padding = new System.Windows.Forms.Padding(10);
 			this.groupActions.Size = new System.Drawing.Size(618, 71);
@@ -834,11 +836,10 @@ namespace GuitarConcert
 			this.groupAttachments.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.groupAttachments.ForeColor = System.Drawing.SystemColors.Highlight;
 			this.groupAttachments.Location = new System.Drawing.Point(30, 120);
-			this.groupAttachments.MaximumSize = new System.Drawing.Size(0, 150);
 			this.groupAttachments.MinimumSize = new System.Drawing.Size(0, 30);
 			this.groupAttachments.Name = "groupAttachments";
 			this.groupAttachments.Padding = new System.Windows.Forms.Padding(20);
-			this.groupAttachments.Size = new System.Drawing.Size(618, 30);
+			this.groupAttachments.Size = new System.Drawing.Size(618, 191);
 			this.groupAttachments.TabIndex = 2;
 			this.groupAttachments.TabStop = false;
 			this.groupAttachments.Text = "Załączniki";
@@ -850,19 +851,34 @@ namespace GuitarConcert
 			this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
 			this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
 			this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+			this.tableLayoutPanel4.Controls.Add(this.label21, 0, 2);
 			this.tableLayoutPanel4.Controls.Add(this.label7, 0, 0);
 			this.tableLayoutPanel4.Controls.Add(this.Tablature, 1, 0);
 			this.tableLayoutPanel4.Controls.Add(this.Midi, 1, 1);
 			this.tableLayoutPanel4.Controls.Add(this.label6, 0, 1);
+			this.tableLayoutPanel4.Controls.Add(this.Pdf, 1, 2);
 			this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tableLayoutPanel4.Location = new System.Drawing.Point(20, 35);
 			this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-			this.tableLayoutPanel4.RowCount = 2;
+			this.tableLayoutPanel4.RowCount = 3;
 			this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.52632F));
 			this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.47368F));
-			this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-			this.tableLayoutPanel4.Size = new System.Drawing.Size(578, 0);
+			this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+			this.tableLayoutPanel4.Size = new System.Drawing.Size(578, 136);
 			this.tableLayoutPanel4.TabIndex = 0;
+			// 
+			// label21
+			// 
+			this.label21.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			this.label21.ForeColor = System.Drawing.Color.CadetBlue;
+			this.label21.Location = new System.Drawing.Point(5, 94);
+			this.label21.Margin = new System.Windows.Forms.Padding(5);
+			this.label21.Name = "label21";
+			this.label21.Size = new System.Drawing.Size(190, 37);
+			this.label21.TabIndex = 14;
+			this.label21.Text = "Plik PDF";
+			this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// label7
 			// 
@@ -872,7 +888,7 @@ namespace GuitarConcert
 			this.label7.Location = new System.Drawing.Point(5, 5);
 			this.label7.Margin = new System.Windows.Forms.Padding(5);
 			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(190, 1);
+			this.label7.Size = new System.Drawing.Size(190, 35);
 			this.label7.TabIndex = 12;
 			this.label7.Text = "Tabulatura";
 			this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -896,7 +912,7 @@ namespace GuitarConcert
 			this.Midi.Dock = System.Windows.Forms.DockStyle.Top;
 			this.Midi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.Midi.ForeColor = System.Drawing.Color.DarkSlateGray;
-			this.Midi.Location = new System.Drawing.Point(203, 10);
+			this.Midi.Location = new System.Drawing.Point(203, 55);
 			this.Midi.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
 			this.Midi.Name = "Midi";
 			this.Midi.ReadOnly = true;
@@ -910,13 +926,26 @@ namespace GuitarConcert
 			this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.label6.ForeColor = System.Drawing.Color.CadetBlue;
-			this.label6.Location = new System.Drawing.Point(5, 5);
+			this.label6.Location = new System.Drawing.Point(5, 50);
 			this.label6.Margin = new System.Windows.Forms.Padding(5);
 			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(190, 1);
+			this.label6.Size = new System.Drawing.Size(190, 34);
 			this.label6.TabIndex = 8;
 			this.label6.Text = "Plik MIDI";
 			this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// Pdf
+			// 
+			this.Pdf.Dock = System.Windows.Forms.DockStyle.Top;
+			this.Pdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			this.Pdf.Location = new System.Drawing.Point(203, 99);
+			this.Pdf.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
+			this.Pdf.Name = "Pdf";
+			this.Pdf.ReadOnly = true;
+			this.Pdf.Size = new System.Drawing.Size(372, 26);
+			this.Pdf.TabIndex = 15;
+			this.Pdf.Text = "Kliknij tutaj dwukrotnie LPM";
+			this.Pdf.DoubleClick += new System.EventHandler(this.PdfDoubleClick);
 			// 
 			// button2
 			// 
@@ -934,7 +963,7 @@ namespace GuitarConcert
 			this.groupLyrics.Dock = System.Windows.Forms.DockStyle.Top;
 			this.groupLyrics.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.groupLyrics.ForeColor = System.Drawing.SystemColors.Highlight;
-			this.groupLyrics.Location = new System.Drawing.Point(30, 150);
+			this.groupLyrics.Location = new System.Drawing.Point(30, 311);
 			this.groupLyrics.MaximumSize = new System.Drawing.Size(0, 410);
 			this.groupLyrics.MinimumSize = new System.Drawing.Size(0, 30);
 			this.groupLyrics.Name = "groupLyrics";
@@ -966,7 +995,7 @@ namespace GuitarConcert
 			this.groupChords.Dock = System.Windows.Forms.DockStyle.Top;
 			this.groupChords.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.groupChords.ForeColor = System.Drawing.SystemColors.Highlight;
-			this.groupChords.Location = new System.Drawing.Point(30, 180);
+			this.groupChords.Location = new System.Drawing.Point(30, 341);
 			this.groupChords.MaximumSize = new System.Drawing.Size(0, 410);
 			this.groupChords.MinimumSize = new System.Drawing.Size(0, 30);
 			this.groupChords.Name = "groupChords";
@@ -1191,6 +1220,8 @@ namespace GuitarConcert
 			((System.ComponentModel.ISupportInitialize)(this.Cover)).EndInit();
 			this.ResumeLayout(false);
 		}
+		private System.Windows.Forms.TextBox Pdf;
+		private System.Windows.Forms.Label label21;
 		private System.Windows.Forms.Label label20;
 		private System.Windows.Forms.Label label19;
 		private System.Windows.Forms.PictureBox ArtistPicture;

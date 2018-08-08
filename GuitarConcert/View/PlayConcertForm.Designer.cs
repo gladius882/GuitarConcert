@@ -71,13 +71,13 @@ namespace GuitarConcert
 			this.splitContainer6 = new System.Windows.Forms.SplitContainer();
 			this.lyricsBox = new RichTextBoxLinks.RichTextBoxEx();
 			this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
-			this.alphaTabControl1 = new AlphaTab.Platform.CSharp.WinForms.AlphaTabControl();
 			this.splitContainer4 = new System.Windows.Forms.SplitContainer();
 			this.chordDiagramPicture = new System.Windows.Forms.PictureBox();
 			this.splitContainer5 = new System.Windows.Forms.SplitContainer();
 			this.chordsListBox = new System.Windows.Forms.ListBox();
 			this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
 			this.timer = new System.Windows.Forms.Timer(this.components);
+			this.webBrowser1 = new System.Windows.Forms.WebBrowser();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
 			this.splitContainer1.Panel1.SuspendLayout();
 			this.splitContainer1.Panel2.SuspendLayout();
@@ -268,7 +268,7 @@ namespace GuitarConcert
 			// 
 			// splitContainer6.Panel2
 			// 
-			this.splitContainer6.Panel2.Controls.Add(this.alphaTabControl1);
+			this.splitContainer6.Panel2.Controls.Add(this.webBrowser1);
 			this.splitContainer6.Size = new System.Drawing.Size(338, 592);
 			this.splitContainer6.SplitterDistance = 388;
 			this.splitContainer6.TabIndex = 0;
@@ -294,20 +294,6 @@ namespace GuitarConcert
 			this.vScrollBar1.TabIndex = 1;
 			this.vScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.VScrollBar1Scroll);
 			this.vScrollBar1.ValueChanged += new System.EventHandler(this.VScrollBar1ValueChanged);
-			// 
-			// alphaTabControl1
-			// 
-			this.alphaTabControl1.AutoScroll = true;
-			this.alphaTabControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(99)))), ((int)(((byte)(98)))));
-			this.alphaTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.alphaTabControl1.ForeColor = System.Drawing.Color.WhiteSmoke;
-			this.alphaTabControl1.Location = new System.Drawing.Point(0, 0);
-			this.alphaTabControl1.Name = "alphaTabControl1";
-			this.alphaTabControl1.Padding = new System.Windows.Forms.Padding(10);
-			this.alphaTabControl1.Size = new System.Drawing.Size(338, 200);
-			this.alphaTabControl1.StavesMode = "default";
-			this.alphaTabControl1.TabIndex = 0;
-			this.alphaTabControl1.Text = "alphaTabControl1";
 			// 
 			// splitContainer4
 			// 
@@ -374,6 +360,15 @@ namespace GuitarConcert
 			this.checkedListBox1.Size = new System.Drawing.Size(222, 202);
 			this.checkedListBox1.TabIndex = 0;
 			// 
+			// webBrowser1
+			// 
+			this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.webBrowser1.Location = new System.Drawing.Point(0, 0);
+			this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+			this.webBrowser1.Name = "webBrowser1";
+			this.webBrowser1.Size = new System.Drawing.Size(338, 200);
+			this.webBrowser1.TabIndex = 0;
+			// 
 			// PlayConcertForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -416,6 +411,6 @@ namespace GuitarConcert
 			this.splitContainer5.ResumeLayout(false);
 			this.ResumeLayout(false);
 		}
-		private AlphaTab.Platform.CSharp.WinForms.AlphaTabControl alphaTabControl1;
+		private System.Windows.Forms.WebBrowser webBrowser1;
 	}
 }
