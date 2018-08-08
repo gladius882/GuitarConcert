@@ -48,7 +48,7 @@ namespace GuitarConcert
 		public void LoadTag(string tag)
 		{
 			Tag Tag = new Tag();
-			Tag.Load("data/tags/"+tag+".xml");
+			Tag.FromFile("data/tags/"+tag+".xml");
 			Title.Text = tag;
 			TagNameField.Text = tag;
 			TagSummaryField.Text = Tag.Summary;

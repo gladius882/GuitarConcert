@@ -59,7 +59,7 @@ namespace GuitarConcert
 			Lyrics.Text = File.ReadAllText(filePattern+".gcl");
 			SongBook.Load(filePattern+".gcc");
 			
-			this.Load(filePattern+".xml");
+			this.FromFile(filePattern+".xml");
 			
 			XmlDocument doc = new XmlDocument();
 			doc.Load(filePattern+".xml");
