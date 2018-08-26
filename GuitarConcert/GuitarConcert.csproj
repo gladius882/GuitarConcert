@@ -11,6 +11,7 @@
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <AppDesignerFolder>Properties</AppDesignerFolder>
+    <NoWin32Manifest>False</NoWin32Manifest>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -38,6 +39,9 @@
     <Reference Include="DotNetZip">
       <HintPath>..\packages\DotNetZip.1.10.1\lib\net20\DotNetZip.dll</HintPath>
     </Reference>
+    <Reference Include="GuitarConcert.Controls, Version=1.0.6809.34302, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\GuitarConcert.Controls\bin\Debug\GuitarConcert.Controls.dll</HintPath>
+    </Reference>
     <Reference Include="LastFmLib">
       <HintPath>..\..\LastFmLib\LastFmLibDll\bin\Debug\LastFmLib.dll</HintPath>
     </Reference>
@@ -63,6 +67,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\LyricsBox.cs" />
+    <Compile Include="Controls\LyricsBox.Designer.cs">
+      <DependentUpon>LyricsBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dialog\Dialog.cs" />
     <Compile Include="Dialog\Dialog.Designer.cs">
       <DependentUpon>Dialog.cs</DependentUpon>
@@ -116,6 +124,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Controls\LyricsBox.resx">
+      <DependentUpon>LyricsBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dialog\Dialog.resx">
       <DependentUpon>Dialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +157,7 @@
   <ItemGroup>
     <Folder Include="Helpers" />
     <Folder Include="Dialog" />
+    <Folder Include="Controls" />
     <Folder Include="Song" />
     <Folder Include="View" />
   </ItemGroup>

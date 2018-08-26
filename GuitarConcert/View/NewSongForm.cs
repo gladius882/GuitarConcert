@@ -9,6 +9,7 @@
 using System;
 using System.Linq;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Net;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -25,6 +26,8 @@ namespace GuitarConcert
 	/// </summary>
 	public partial class NewSongForm : Form
 	{
+		private bool Edit = false;
+		
 		public NewSongForm()
 		{
 			InitializeComponent();
@@ -57,6 +60,59 @@ namespace GuitarConcert
 			
 			ArtistPicture.ImageLocation = String.Empty;
 			Cover.ImageLocation = String.Empty;
+		}
+		
+		public void LoadSong(string artist, string title)
+		{
+			Edit = true;
+			string songFile = artist + " - " + title;
+			using(GcFile gc = new GcFile("song/" + songFile + ".gc"))
+			{
+				gc.Extract("cache/add");
+			}
+			
+			Song song = new Song();
+			song.FromFile("cache/add/" + songFile + ".xml");
+			
+			SongTitle.Text = song.Name;
+			SongArtist.Text = song.ArtistName;
+			SongAlbum.Text = song.AlbumTitle;
+			SongLink.Text = song.Url;
+			Duration.Value = song.Duration;
+			Release.Value = song.Release;
+			Position.Value = song.Position;
+			
+			foreach(ShortTag tag in song.Tags)
+			{
+				for(int i=0; i<TagsList.Items.Count; i++)
+				{
+					if(tag.Name.ToLower() == TagsList.Items[i].ToString().ToLower())
+						TagsList.SetItemChecked(i, true);
+				}
+			}
+			
+			Bpm.Value = song.Bpm;
+			Metrum.Text = song.Metrum;
+			AutoscrollSpeed.Value = song.AutoscrollSpeed;
+			AutoscrollDelay.Value = song.AutoscrollDelay;
+			Capo.Value = song.Capo;
+			
+			if(File.Exists("cache/add/" + artist + " - " + title + ".gp5"))
+				Tablature.Text = Environment.CurrentDirectory + @"\cache\add\" + artist + " - " + title + ".gp5";
+			
+			if(File.Exists("cache/add/" + artist + " - " + title + ".mid"))
+				Midi.Text = Environment.CurrentDirectory + @"\cache\add\" + artist + " - " + title + ".mid";
+			
+			if(File.Exists("cache/add/" + artist + " - " + title + ".pdf"))
+				Pdf.Text = Environment.CurrentDirectory + @"\cache\add\" + artist + " - " + title + ".pdf";
+			
+			Lyrics.Text = File.ReadAllText("cache/add/" + artist + " - " + title + ".gcl");
+			Chords.Text = File.ReadAllText("cache/add/" + artist + " - " + title + ".gcc");
+			
+			File.Delete("cache/add/" + songFile + ".xml");
+			File.Delete("cache/add/" + songFile + ".gcl");
+			File.Delete("cache/add/" + songFile + ".gcc");
+			File.Delete("song/" + songFile + ".gc");
 		}
 		
 		private bool SongExists(string artist, string song)
@@ -180,19 +236,30 @@ namespace GuitarConcert
 			if(Cover.ImageLocation != String.Empty)
 			{
 				if(File.Exists("assets/covers/"+coverImage) == false)
+				{
 					File.Copy(Cover.ImageLocation, "assets/covers/"+coverImage);
+					File.Copy(Cover.ImageLocation, "assets/covers/thumbnails/"+coverImage);
+					ResizeImage("assets/covers/thumbnails/"+coverImage, 64, 64);
+				}
 			}
 			
 			string artistImage = SongArtist.Text + ".png";
 			if(ArtistPicture.ImageLocation != String.Empty)
 			{
 				if(File.Exists("assets/artists/"+artistImage) == false)
+				{
 					File.Copy(ArtistPicture.ImageLocation, "assets/artists/"+artistImage);
+					File.Copy(ArtistPicture.ImageLocation, "assets/artists/thumbnails/"+artistImage);
+					ResizeImage("assets/artists/thumbnails/"+artistImage, 64, 64);
+				}
 			}
 		}
 		
 		private void AddEntryToList()
 		{
+			if(Edit == true)
+				return;
+			
 			string entry = SongArtist.Text.Trim() + ";" + SongTitle.Text.Trim() + ";" + SongAlbum.Text.Trim();
 			
 			if(ListTypeSongs.Checked == true)
@@ -200,5 +267,32 @@ namespace GuitarConcert
 			else
 				File.AppendAllText("data/wish.list" ,entry + Environment.NewLine);
 		}
+		
+		private void ClearCache(string path)
+		{
+			foreach(string file in Directory.GetFiles(path))
+			{
+				File.Delete(file);
+			}
+		}
+		
+		private void ResizeImage(string path, int nWidth, int nHeight)
+	    {
+	        using (var result = new Bitmap(nWidth, nHeight))
+	        {
+	            using (var input = new Bitmap(path))
+	            {
+	                using (Graphics g = Graphics.FromImage((System.Drawing.Image)result))
+	                {
+	                    g.DrawImage(input, 0, 0, nWidth, nHeight);
+	                }
+	            }
+	
+	            var ici = ImageCodecInfo.GetImageEncoders().FirstOrDefault(ie => ie.MimeType == "image/jpeg");
+	            var eps = new EncoderParameters(1);
+	            eps.Param[0] = new EncoderParameter(System.Drawing.Imaging.Encoder.Quality, 100L);
+	            result.Save(path, ici, eps);
+	        }
+	    }
 	}
 }

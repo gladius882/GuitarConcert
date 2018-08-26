@@ -28,6 +28,7 @@ namespace GuitarConcert
 			OnCreate();
 			this.parent = (MainForm)this.MdiParent;
 			CurrentList = List.SONGS;
+			lyricsBox1.LoadLyrics(@"C:\Users\gladius882\Desktop\Nauka\index.html");
 		}
 		
 		private void OnCreate()
@@ -125,6 +126,20 @@ namespace GuitarConcert
 		{
 			MainForm parent = (MainForm)this.MdiParent;
 			parent.LoadView(new NewSongForm());
+		}
+		
+		void ContextMenuItemEditClick(object sender, EventArgs e)
+		{
+			string artist = this.listViewSongs.SelectedItems[0].SubItems[0].Text;
+			string title = this.listViewSongs.SelectedItems[0].SubItems[1].Text;
+			NewSongForm form = new NewSongForm();
+			form.LoadSong(artist, title);
+			(MdiParent as MainForm).LoadView(form);
+		}
+		
+		void LyricsBox1Click(object sender, EventArgs e)
+		{
+			lyricsBox1.ScrollTo(100);
 		}
 	}
 	

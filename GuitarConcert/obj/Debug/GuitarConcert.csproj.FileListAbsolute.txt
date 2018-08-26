@@ -72,3 +72,5 @@ C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\bin\Debug\LastFmLib.
 C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\obj\Debug\GuitarConcert.Dialog.resources
 C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\obj\Debug\GuitarConcert.TagsForm.resources
 C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\obj\Debug\GuitarConcert.TagDialog.resources
+C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\bin\Debug\GuitarConcert.Controls.pdb
+C:\Users\gladius882\Desktop\Git\GuitarConcert\GuitarConcert\obj\Debug\GuitarConcert.LyricsBox.resources

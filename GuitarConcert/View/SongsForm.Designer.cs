@@ -55,6 +55,7 @@ namespace GuitarConcert
 			this.contextMenuItemEdit = new System.Windows.Forms.ToolStripMenuItem();
 			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
 			this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+			this.lyricsBox1 = new GuitarConcert.LyricsBox();
 			this.toolStrip1.SuspendLayout();
 			this.songContextMenu.SuspendLayout();
 			this.statusStrip1.SuspendLayout();
@@ -72,7 +73,7 @@ namespace GuitarConcert
 									this.toolStripWishlist});
 			this.toolStrip1.Location = new System.Drawing.Point(0, 0);
 			this.toolStrip1.Name = "toolStrip1";
-			this.toolStrip1.Size = new System.Drawing.Size(914, 39);
+			this.toolStrip1.Size = new System.Drawing.Size(914, 31);
 			this.toolStrip1.TabIndex = 0;
 			this.toolStrip1.Text = "toolStrip1";
 			// 
@@ -82,7 +83,7 @@ namespace GuitarConcert
 			this.toolStripAdd.Image = ((System.Drawing.Image)(resources.GetObject("toolStripAdd.Image")));
 			this.toolStripAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.toolStripAdd.Name = "toolStripAdd";
-			this.toolStripAdd.Size = new System.Drawing.Size(36, 36);
+			this.toolStripAdd.Size = new System.Drawing.Size(28, 28);
 			this.toolStripAdd.Text = "Dodaj";
 			this.toolStripAdd.Click += new System.EventHandler(this.ToolStripAddClick);
 			// 
@@ -92,7 +93,7 @@ namespace GuitarConcert
 			this.toolStripDelete.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDelete.Image")));
 			this.toolStripDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.toolStripDelete.Name = "toolStripDelete";
-			this.toolStripDelete.Size = new System.Drawing.Size(36, 36);
+			this.toolStripDelete.Size = new System.Drawing.Size(28, 28);
 			this.toolStripDelete.Text = "Usuń";
 			this.toolStripDelete.Click += new System.EventHandler(this.ToolStripDeleteClick);
 			// 
@@ -102,13 +103,13 @@ namespace GuitarConcert
 			this.toolStripEdit.Image = ((System.Drawing.Image)(resources.GetObject("toolStripEdit.Image")));
 			this.toolStripEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.toolStripEdit.Name = "toolStripEdit";
-			this.toolStripEdit.Size = new System.Drawing.Size(36, 36);
+			this.toolStripEdit.Size = new System.Drawing.Size(28, 28);
 			this.toolStripEdit.Text = "Edytuj";
 			// 
 			// toolStripSeparator1
 			// 
 			this.toolStripSeparator1.Name = "toolStripSeparator1";
-			this.toolStripSeparator1.Size = new System.Drawing.Size(6, 39);
+			this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
 			// 
 			// toolStripSongs
 			// 
@@ -116,7 +117,7 @@ namespace GuitarConcert
 			this.toolStripSongs.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSongs.Image")));
 			this.toolStripSongs.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.toolStripSongs.Name = "toolStripSongs";
-			this.toolStripSongs.Size = new System.Drawing.Size(36, 36);
+			this.toolStripSongs.Size = new System.Drawing.Size(28, 28);
 			this.toolStripSongs.Text = "Piosenki";
 			this.toolStripSongs.Click += new System.EventHandler(this.ToolStripSongsClick);
 			// 
@@ -126,7 +127,7 @@ namespace GuitarConcert
 			this.toolStripWishlist.Image = ((System.Drawing.Image)(resources.GetObject("toolStripWishlist.Image")));
 			this.toolStripWishlist.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.toolStripWishlist.Name = "toolStripWishlist";
-			this.toolStripWishlist.Size = new System.Drawing.Size(36, 36);
+			this.toolStripWishlist.Size = new System.Drawing.Size(28, 28);
 			this.toolStripWishlist.Text = "Lista życzeń";
 			this.toolStripWishlist.Click += new System.EventHandler(this.ToolStripWishlistClick);
 			// 
@@ -143,14 +144,14 @@ namespace GuitarConcert
 									this.songAlbum});
 			this.listViewSongs.ContextMenuStrip = this.songContextMenu;
 			this.listViewSongs.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.listViewSongs.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			this.listViewSongs.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.listViewSongs.ForeColor = System.Drawing.SystemColors.Menu;
 			this.listViewSongs.FullRowSelect = true;
-			this.listViewSongs.Location = new System.Drawing.Point(0, 39);
+			this.listViewSongs.Location = new System.Drawing.Point(0, 31);
 			this.listViewSongs.MultiSelect = false;
 			this.listViewSongs.Name = "listViewSongs";
 			this.listViewSongs.ShowItemToolTips = true;
-			this.listViewSongs.Size = new System.Drawing.Size(914, 358);
+			this.listViewSongs.Size = new System.Drawing.Size(914, 366);
 			this.listViewSongs.Sorting = System.Windows.Forms.SortOrder.Ascending;
 			this.listViewSongs.TabIndex = 1;
 			this.listViewSongs.UseCompatibleStateImageBehavior = false;
@@ -196,6 +197,7 @@ namespace GuitarConcert
 			this.contextMenuItemEdit.Name = "contextMenuItemEdit";
 			this.contextMenuItemEdit.Size = new System.Drawing.Size(107, 22);
 			this.contextMenuItemEdit.Text = "Edytuj";
+			this.contextMenuItemEdit.Click += new System.EventHandler(this.ContextMenuItemEditClick);
 			// 
 			// statusStrip1
 			// 
@@ -212,11 +214,20 @@ namespace GuitarConcert
 			this.toolStripStatusLabel.Name = "toolStripStatusLabel";
 			this.toolStripStatusLabel.Size = new System.Drawing.Size(0, 17);
 			// 
+			// lyricsBox1
+			// 
+			this.lyricsBox1.Location = new System.Drawing.Point(108, 66);
+			this.lyricsBox1.Name = "lyricsBox1";
+			this.lyricsBox1.Size = new System.Drawing.Size(501, 231);
+			this.lyricsBox1.TabIndex = 3;
+			this.lyricsBox1.Click += new System.EventHandler(this.LyricsBox1Click);
+			// 
 			// SongsForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(914, 397);
+			this.Controls.Add(this.lyricsBox1);
 			this.Controls.Add(this.statusStrip1);
 			this.Controls.Add(this.listViewSongs);
 			this.Controls.Add(this.toolStrip1);
@@ -230,6 +241,7 @@ namespace GuitarConcert
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private GuitarConcert.LyricsBox lyricsBox1;
 		private System.Windows.Forms.ToolStripButton toolStripDelete;
 		private System.Windows.Forms.ColumnHeader songAlbum;
 		private System.Windows.Forms.ColumnHeader songTitle;

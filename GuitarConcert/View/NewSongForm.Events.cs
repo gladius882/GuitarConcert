@@ -42,7 +42,7 @@ namespace GuitarConcert
 				return;
 			}
 			
-//			try {
+			try {
 				CreateSongFile();
 				CreateLyricsFile();
 				CreateChordsFile();
@@ -52,10 +52,10 @@ namespace GuitarConcert
 				MoveFiles();
 				AddEntryToList();
 				(MdiParent as MainForm).LoadView(new SongsForm());
-//			}
-//			catch(Exception ex) {
-//				MessageBox.Show("Wystąpił błąd podczas dodawania piosenki\n"+ex.Message, "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
-//			}
+			}
+			catch(Exception ex) {
+				MessageBox.Show("Wystąpił błąd podczas dodawania piosenki\n"+ex.Message, "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
 		}
 		
 		void CancelClick(object sender, EventArgs e)
@@ -167,10 +167,7 @@ namespace GuitarConcert
 		
 		void NewSongFormFormClosed(object sender, FormClosedEventArgs e)
 		{
-			foreach(string file in Directory.GetFiles("cache/add"))
-			{
-				File.Delete(file);
-			}
+			ClearCache("cache/add");
 		}
 		
 		void ChordAddClick(object sender, EventArgs e)
